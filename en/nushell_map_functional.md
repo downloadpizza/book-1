@@ -15,7 +15,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | NuShell                | Clojure                       | Tablecloth (Ocaml / Elm)                             | Haskell                                    |
 | ---------------------- | ----------------------------- | ---------------------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
 | alias                  |                               |                                                      |                                            |                                                 |
-| append                 | conj                          |                                                      | (++)                                       |                                                 |
+| append                 | conj                          | append                                               | (++)                                       |                                                 |
 | args                   |                               |                                                      |                                            |                                                 |
 | autoview               |                               |                                                      |                                            |                                                 |
 | average(`*`)           |                               |                                                      |                                            |                                                 |
@@ -40,7 +40,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | evaluate_by            |                               |                                                      |                                            |                                                 |
 | exit                   | System/exit                   |                                                      |                                            |                                                 |
 | fetch(`*`)             |                               |                                                      |                                            |                                                 |
-| first                  | first                         |                                                      | head                                       |                                                 |
+| first                  | first                         | head                                                 | head                                       |                                                 |
 | format                 | format                        |                                                      | Text.Printf.printf                         |                                                 |
 | from bson              |                               |                                                      |                                            |                                                 |
 | from csv               |                               |                                                      |                                            |                                                 |
@@ -68,11 +68,11 @@ Note: this table assumes Nushell 0.13.1 or later.
 | inc(`*`)               | inc                           |                                                      | succ                                       |                                                 |
 | insert                 |                               |                                                      |                                            |                                                 |
 | is_empty               | empty?                        |                                                      |                                            |                                                 |
-| keep                   | take, drop-last, pop          |                                                      | init, take                                 |                                                 |
+| keep                   | take, drop-last, pop          | take, init                                           | take, init                                 |                                                 |
 | keep_until             |                               |                                                      |                                            |                                                 |
-| keep_while             |                               |                                                      |                                            |                                                 |
+| keep_while             | take-while                    | takeWhile                                            |                                            |                                                 |
 | kill                   |                               |                                                      |                                            |                                                 |
-| last                   | last, peek                    |                                                      | last                                       |                                                 |
+| last                   | last, peek                    | last                                                 | last                                       |                                                 |
 | lines                  |                               |                                                      | lines, words, split-with                   |                                                 |
 | ls                     |                               |                                                      |                                            |                                                 |
 | map_max_by             |                               |                                                      |                                            |                                                 |
@@ -82,15 +82,15 @@ Note: this table assumes Nushell 0.13.1 or later.
 | mv                     |                               |                                                      |                                            |                                                 |
 | next                   |                               |                                                      |                                            |                                                 |
 | nth                    | nth                           |                                                      |                                            |                                                 |
-| open                   |                               |                                                      |                                            |                                                 |
+| open                   | with-open                     |                                                      |                                            |                                                 |
 | parse                  |                               |                                                      |                                            |                                                 |
 | pivot                  | (apply mapv vector matrix)    |                                                      | transpose                                  |                                                 |
 | post(`*`)              |                               |                                                      |                                            |                                                 |
-| prepend                | cons                          |                                                      |                                            |                                                 |
+| prepend                | cons                          | cons, ::                                             | ::                                         |                                                 |
 | prev                   |                               |                                                      |                                            |                                                 |
 | ps(`*`)                |                               |                                                      |                                            |                                                 |
 | pwd                    |                               |                                                      |                                            |                                                 |
-| range                  |                               |                                                      | 1..10, 'a'..'f'                            |                                                 |
+| range                  | range                         | range                                                | 1..10, 'a'..'f'                            |                                                 |
 | reduce_by              |                               |                                                      |                                            |                                                 |
 | reject                 |                               |                                                      |                                            |                                                 |
 | rename                 |                               |                                                      |                                            |                                                 |
@@ -101,11 +101,11 @@ Note: this table assumes Nushell 0.13.1 or later.
 | shells                 |                               |                                                      |                                            |                                                 |
 | shuffle                | shuffle                       |                                                      |                                            |                                                 |
 | size                   | count                         |                                                      |                                            |                                                 |
-| skip                   | rest                          |                                                      | tail                                       |                                                 |
+| skip                   | rest                          | tail                                                 | tail                                       |                                                 |
 | skip_until             |                               |                                                      |                                            |                                                 |
 | skip_while             |                               |                                                      |                                            |                                                 |
-| sort-by                | sort-by                       |                                                      |                                            |                                                 |
-| split_by               |                               |                                                      |                                            |                                                 |
+| sort-by                | sort, sort-by                 |                                                      |                                            |                                                 |
+| split_by               | split                         | split, words, lines                                  | split, words, lines                        |                                                 |
 | split_column           |                               |                                                      |                                            |                                                 |
 | split_row              |                               |                                                      |                                            |                                                 |
 | str(`*`)               | clojure.string functions      |                                                      |                                            |                                                 |

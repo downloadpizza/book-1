@@ -68,7 +68,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | inc(`*`)               | N/A                           |                                                      | N/A                                        | N/A                                             |
 | insert                 |                               |                                                      | Add-Member                                 |                                                 |
 | is_empty               | is null                       | String.InNullOrEmpty()                               | String.InNullOrEmpty()                     |                                                 |
-| keep                   | top,limit                     | Take                                                 | Select-Object -First                       | head                                            |
+| keep, =take            | top, limit                    | Take                                                 | Select-Object -First                       | head                                            |
 | keep_until             |                               |                                                      |                                            |                                                 |
 | keep_while             |                               | TakeWhile                                            |                                            |                                                 |
 | kill                   | N/A                           | N/A                                                  | Stop-Process, kill                         | kill                                            |
@@ -76,7 +76,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | lines                  | N/A                           | N/A                                                  | File.ReadAllLines()                        |                                                 |
 | ls                     | N/A                           | N/A                                                  | Get-ChildItem, dir, ls                     | ls                                              |
 | map_max_by             |                               |                                                      |                                            |                                                 |
-| match(`*`)             | case when                     | RegEx                                                | [regex]                                    |                                                 |
+| match(`*`)             | case when                     | Regex.IsMatch                                        | [regex]                                    |                                                 |
 | merge                  |                               |                                                      |                                            |                                                 |
 | mkdir                  | N/A                           | N/A                                                  | mkdir, md                                  | mkdir                                           |
 | mv                     | N/A                           | N/A                                                  | Move-Item, mv, move, mi                    | mv                                              |

@@ -40,7 +40,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | evaluate_by            |                               |                                                      |                                            |                                                 |
 | exit                   | exit                          | System.exit, kotlin.system.exitProcess               | exit                                       | exit                                            |
 | fetch(`*`)             | urllib.request.urlopen        |                                                      |                                            |                                                 |
-| first                  | list[0]                       | List[0], peek                                        | vector[0], top                             | vec[0]                                          |
+| first                  | list[0]                       | List[0], peek                                        | vector[0], top                             | Vec[0]                                          |
 | format                 | format                        |                                                      |                                            |                                                 |
 | from bson              |                               |                                                      |                                            |                                                 |
 | from csv               | csv                           |                                                      |                                            |                                                 |
@@ -65,7 +65,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | help                   | help                          |                                                      |                                            |                                                 |
 | histogram              |                               |                                                      |                                            |                                                 |
 | history                |                               |                                                      |                                            |                                                 |
-| inc(`*`)               | x += 1                        | x++                                                  | x++                                        | += 1                                            |
+| inc(`*`)               | x += 1                        | x++                                                  | x++                                        | x += 1                                            |
 | insert                 | list.insert                   |                                                      |                                            |                                                 |
 | is_empty               | is None                       | isEmpty                                              | empty                                      |                                                 |
 | keep                   | list[:x]                      |                                                      |                                            |                                                 |
@@ -76,12 +76,12 @@ Note: this table assumes Nushell 0.13.1 or later.
 | lines                  | split, splitlines             | split                                                | views::split                               |                                                 |
 | ls                     | os.listdir                    |                                                      |                                            |                                                 |
 | map_max_by             |                               |                                                      |                                            |                                                 |
-| match(`*`)             | re                            |                                                      |                                            |                                                 |
+| match(`*`)             | re.findall                    | matches                                              | regex_match                                |                                                 |
 | merge                  |                               |                                                      |                                            |                                                 |
 | mkdir                  | os.mkdir                      |                                                      |                                            |                                                 |
 | mv                     | shutil.move                   |                                                      |                                            |                                                 |
 | next                   |                               |                                                      |                                            |                                                 |
-| nth                    | list[x]                       |                                                      |                                            |                                                 |
+| nth                    | list[x]                       | List[x]                                              | vector[x]                                  | Vec[x]                                          |
 | open                   | open                          |                                                      |                                            |                                                 |
 | parse                  |                               |                                                      |                                            |                                                 |
 | pivot                  | zip(*matrix)                  |                                                      |                                            |                                                 |
@@ -104,8 +104,8 @@ Note: this table assumes Nushell 0.13.1 or later.
 | skip                   | list[x:]                      |                                                      |                                            |                                                 |
 | skip_until             |                               |                                                      |                                            |                                                 |
 | skip_while             | itertools.dropwhile           |                                                      |                                            |                                                 |
-| sort-by                | sorted, list.sort             |                                                      |                                            |                                                 |
-| split_by               | re.split                      |                                                      |                                            |                                                 |
+| sort-by                | sorted, list.sort             | sortedBy, sortedWith, Arrays.sort, Collections.sort  | sort                                       | sort                                            |
+| split_by               | str.split, re.split           | split                                                | views::split                               | split                                           |
 | split_column           |                               |                                                      |                                            |                                                 |
 | split_row              |                               |                                                      |                                            |                                                 |
 | str(`*`)               | str functions                 |                                                      |                                            |                                                 |
