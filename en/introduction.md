@@ -53,7 +53,7 @@ The first thing we'll do is to sort our table by the size. To do this, we'll tak
 
 You can see that to make this work we didn't pass commandline arguments to `ls`. Instead, we used the `sort-by` command that Nu provides to do the sorting of the output of the `ls` command. To see the biggest files on top, we also used `reverse`.
 
-Nu provides many commands that can work on tables. For example, we could filter the contents of the `ls` table so that it only shows files over 4 kilobytes:
+Nu provides many commands that can work on tables. For example, we could filter the contents of the `ls` table so that it only shows files over 1 kilobyte:
 
 ```
 > ls | where size > 1kb
