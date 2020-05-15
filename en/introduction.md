@@ -143,7 +143,7 @@ This is a bit different than the tables we saw before. The `sys` command gives u
 The `get` command lets us jump into the contents of a column of the table. Here, we're looking into the "host" column, which contains information about the host that Nu is running on. The name of the OS, the hostname, the CPU, and more. Let's get the name of the users on the system:
 
 ```
-> sys | get host.session
+> sys | get host.sessions
 ───┬─────────
  # │ <value>
 ───┼─────────
@@ -151,7 +151,7 @@ The `get` command lets us jump into the contents of a column of the table. Here,
 ───┴─────────
 ```
 
-Right now, there's just one user on the system named "jonathan". You'll notice that we can pass a path (the `host.session` part) and not just the name of the column. Nu will take the path and go to the corresponding bit of data in the table.
+Right now, there's just one user on the system named "jonathan". You'll notice that we can pass a path (the `host.sessions` part) and not just the name of the column. Nu will take the path and go to the corresponding bit of data in the table.
 
 You might have noticed something else that's different. Rather than having a table of data, we have just a single element: the string "jonathan". Nu works with both tables of data as well as strings. Strings are an important part of working with commands outside of Nu.
 
