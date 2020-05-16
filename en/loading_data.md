@@ -82,7 +82,7 @@ The first thing we want to do when bringing in the file is to work with it a lin
 > open people.txt | lines
 ───┬──────────────────────────────
  0 │ Octavia | Butler | Writer 
- 1 │ Bob | Ross | Painer 
+ 1 │ Bob | Ross | Painter
  2 │ Antonio | Vivaldi | Composer 
 ───┴──────────────────────────────
 ```
@@ -95,7 +95,7 @@ We can see that we're working with the lines because we're back into a table. Ou
  # │ Column1  │ Column2   │ Column3 
 ───┼──────────┼───────────┼───────────
  0 │ Octavia  │  Butler   │  Writer 
- 1 │ Bob      │  Ross     │  Painer 
+ 1 │ Bob      │  Ross     │  Painter
  2 │ Antonio  │  Vivaldi  │  Composer 
 ───┴──────────┴───────────┴───────────
 ```
@@ -108,7 +108,7 @@ That almost looks correct. Looks like there is extra space there. Let's `trim` t
  # │ Column1 │ Column2 │ Column3 
 ───┼─────────┼─────────┼──────────
  0 │ Octavia │ Butler  │ Writer 
- 1 │ Bob     │ Ross    │ Painer 
+ 1 │ Bob     │ Ross    │ Painter
  2 │ Antonio │ Vivaldi │ Composer 
 ───┴─────────┴─────────┴──────────
 ```
@@ -132,7 +132,7 @@ We can also name our columns instead of using the default names:
  # │ first_name │ last_name │ job 
 ───┼────────────┼───────────┼──────────
  0 │ Octavia    │ Butler    │ Writer 
- 1 │ Bob        │ Ross      │ Painer 
+ 1 │ Bob        │ Ross      │ Painter
  2 │ Antonio    │ Vivaldi   │ Composer 
 ───┴────────────┴───────────┴──────────
 ```
@@ -145,7 +145,7 @@ Now that our data is in a table, we can use all the commands we've used on table
  # │ first_name │ last_name │ job 
 ───┼────────────┼───────────┼──────────
  0 │ Antonio    │ Vivaldi   │ Composer 
- 1 │ Bob        │ Ross      │ Painer 
+ 1 │ Bob        │ Ross      │ Painter
  2 │ Octavia    │ Butler    │ Writer 
 ───┴────────────┴───────────┴──────────
 ```

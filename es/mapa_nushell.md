@@ -1,24 +1,24 @@
 ---
 layout: content
-title: Nu map from other shells and domain specific languages
-prev: Coming from bash
-next: Imperative map
-link_prev: /en/coming_from_bash.html
-link_next: /en/nushell_map_imperative.html 
+title: Mapa nushell de otras shells y lenguajes DSLs
+prev: Llegando de Bash
+next: Mapa Imperativo
+link_prev: /es/llegand_de_bash.html
+link_next: /es/mapa_imperativo_nushell.html 
 ---
 
-The idea behind this table is to help you understand how Nu built-ins and plug-ins relate to other known shells and domain specific languages. We've tried to produce a map of all the Nu commands and what their equivalents are in other languages. Contributions are welcome.
+La idea detrás de esta tabla is ayudarte a entender como los comandos internos y plugins en Nu se relacionan con otras shells conocidas y lenguajes de dominio específicos. Hemos intentado producir un mapa de los comandos internos y sus equivalentes en otros lenguajes. Contribuciones son bienvenidas.
 
-Note: this table assumes Nu 0.14.1 or later.
+Nota: Esta tabla asume Nu 0.14.1 o posterior.
 
 
 | NuShell                | SQL                           | .Net LINQ (C#)                                       | PowerShell (without external modules)      | Bash                                            |
 | ---------------------- | ----------------------------- | ---------------------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
 | alias                  | N/A                           | N/A                                                  | alias                                      | alias                                           |
-| append                 | N/A                           | Append                                               | -Append                                    |                                                 |
+| append                 | N/A                           | Append()                                             | -Append                                    |                                                 |
 | args                   | N/A                           | N/A                                                  |                                            |                                                 |
 | autoview               | N/A                           | N/A                                                  |                                            |                                                 |
-| average(`*`)           | avg                           | Average                                              | Measure-Object, measure                    |                                                 |
+| average(`*`)           | avg                           | Average()                                            | Measure-Object, measure                    |                                                 |
 | binaryview(`*`)        | N/A                           |                                                      | Format-Hex                                 |                                                 |
 | calc, = math           | math operators                | Aggregate, Average, Count, Max, Min, Sum             |                                            | bc                                              |
 | cd                     | N/A                           | N/A                                                  | Set-Location, cd                           | cd                                              |
@@ -41,7 +41,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | exit                   | N/A                           |                                                      | exit                                       | exit                                            |
 | fetch(`*`)             | N/A                           | HttpClient,WebClient, HttpWebRequest/Response        | Invoke-WebRequest                          | wget                                            |
 | first                  | top, limit                    | First, FirstOrDefault                                | Select-Object -First                       | head                                            |
-| format                 |                               | String.Format                                        | String.Format()                            |                                                 |
+| format                 |                               | String.Format()                                      | String.Format()                            |                                                 |
 | from bson              | N/A                           | N/A                                                  | N/A                                        |                                                 |
 | from csv               | import flatfile               | N/A                                                  | Import-Csv, ConvertFrom-Csv                |                                                 |
 | from eml               | N/A                           | N/A                                                  | N/A                                        |                                                 |
@@ -68,7 +68,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | inc(`*`)               | N/A                           |                                                      | N/A                                        | N/A                                             |
 | insert                 |                               |                                                      | Add-Member                                 |                                                 |
 | is_empty               | is null                       | String.InNullOrEmpty()                               | String.InNullOrEmpty()                     |                                                 |
-| keep, =take            | top, limit                    | Take                                                 | Select-Object -First                       | head                                            |
+| keep                   | top,limit                     | Take                                                 | Select-Object -First                       | head                                            |
 | keep_until             |                               |                                                      |                                            |                                                 |
 | keep_while             |                               | TakeWhile                                            |                                            |                                                 |
 | kill                   | N/A                           | N/A                                                  | Stop-Process, kill                         | kill                                            |
@@ -76,7 +76,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | lines                  | N/A                           | N/A                                                  | File.ReadAllLines()                        |                                                 |
 | ls                     | N/A                           | N/A                                                  | Get-ChildItem, dir, ls                     | ls                                              |
 | map_max_by             |                               |                                                      |                                            |                                                 |
-| match(`*`)             | case when                     | Regex.IsMatch                                        | [regex]                                    |                                                 |
+| match(`*`)             | case when                     | RegEx                                                | [regex]                                    |                                                 |
 | merge                  |                               |                                                      |                                            |                                                 |
 | mkdir                  | N/A                           | N/A                                                  | mkdir, md                                  | mkdir                                           |
 | mv                     | N/A                           | N/A                                                  | Move-Item, mv, move, mi                    | mv                                              |
@@ -91,7 +91,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | ps(`*`)                | N/A                           | N/A                                                  | Get-Process, ps, gps                       | ps                                              |
 | pwd                    | N/A                           | N/A                                                  | Get-Location, pwd                          | pwd                                             |
 | range                  |                               | Range                                                | 1..10, 'a'..'f'                            |                                                 |
-| reduce_by              |                               | Aggregate                                            |                                            |                                                 |
+| reduce_by              |                               |                                                      |                                            |                                                 |
 | reject                 |                               |                                                      |                                            |                                                 |
 | rename                 | N/A                           | N/A                                                  | Rename-Item, ren, rni                      | mv                                              |
 | reverse                |                               | Reverse                                              | [Array]::Reverse($var)                     |                                                 |
@@ -126,7 +126,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | to url                 | N/A                           | N/A                                                  | N/A                                        |                                                 |
 | to yaml                | N/A                           | N/A                                                  | N/A                                        |                                                 |
 | touch                  | N/A                           | N/A                                                  | Set-Content                                | touch                                           |
-| trim                   | rtrim, ltrim                  | Trim, TrimStart, TrimEnd                             | String.Trim()                              |                                                 |
+| trim                   | rtrim, ltrim                  | String.Trim()                                        | String.Trim()                              |                                                 |
 | uniq                   | distinct                      | Distinct                                             | Get-Unique, gu                             | uniq                                            |
 | update(`**`)           | As                            | N/A                                                  |                                            |                                                 |
 | version                | select @@version              | N/A                                                  | $PSVersionTable                            |                                                 |

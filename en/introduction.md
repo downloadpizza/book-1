@@ -35,7 +35,7 @@ The first thing you'll notice when you run a command like `ls` is that instead o
 
 The table is more than just showing the directory in a different way. Just like tables in a spreadsheet, this table allows us to work with the data more interactively.
 
-The first thing we'll do is to sort our table by the name. To do this, we'll take the output from `ls` and feed it into a command that can sort tables based on the contents of a column.
+The first thing we'll do is to sort our table by the size. To do this, we'll take the output from `ls` and feed it into a command that can sort tables based on the contents of a column.
 
 ```
 > ls | sort-by size | reverse
@@ -53,7 +53,7 @@ The first thing we'll do is to sort our table by the name. To do this, we'll tak
 
 You can see that to make this work we didn't pass commandline arguments to `ls`. Instead, we used the `sort-by` command that Nu provides to do the sorting of the output of the `ls` command. To see the biggest files on top, we also used `reverse`.
 
-Nu provides many commands that can work on tables. For example, we could filter the contents of the `ls` table so that it only shows files over 4 kilobytes:
+Nu provides many commands that can work on tables. For example, we could filter the contents of the `ls` table so that it only shows files over 1 kilobyte:
 
 ```
 > ls | where size > 1kb
@@ -143,7 +143,7 @@ This is a bit different than the tables we saw before. The `sys` command gives u
 The `get` command lets us jump into the contents of a column of the table. Here, we're looking into the "host" column, which contains information about the host that Nu is running on. The name of the OS, the hostname, the CPU, and more. Let's get the name of the users on the system:
 
 ```
-> sys | get host.session
+> sys | get host.sessions
 ───┬─────────
  # │ <value>
 ───┼─────────
@@ -151,7 +151,7 @@ The `get` command lets us jump into the contents of a column of the table. Here,
 ───┴─────────
 ```
 
-Right now, there's just one user on the system named "jonathan". You'll notice that we can pass a path (the `host.session` part) and not just the name of the column. Nu will take the path and go to the corresponding bit of data in the table.
+Right now, there's just one user on the system named "jonathan". You'll notice that we can pass a path (the `host.sessions` part) and not just the name of the column. Nu will take the path and go to the corresponding bit of data in the table.
 
 You might have noticed something else that's different. Rather than having a table of data, we have just a single element: the string "jonathan". Nu works with both tables of data as well as strings. Strings are an important part of working with commands outside of Nu.
 

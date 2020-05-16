@@ -158,11 +158,18 @@ Una vez instaladas las depependencias que Nu necesita, podemos instalarla usando
 
 ¡Eso es todo! Cargo hará el trabajo de descarga Nu junto con sus dependencias, construirla e instalarla en el bin path de cargo para que podamos arrancarlo.
 
-Si deseas instalar todas las funciones, incluyendo algunas opcionales divertidas, puedes hacer:
+Si deseas instalar con más funcionalidades, puedes hacer:
 
 ```
-> cargo install nu --features--stable
+> cargo install nu --features=stable
 ```
+
+Para todas las funcionalidades disponibles, la manera más fácil es descargar la fuente de Nu y construírlo usted mismo usando las herramientas de Rust:
+
+ ```
+ > git clone https://github.com/nushell/nushell.git
+ > cd nushell
+ nushell> cargo install --path . --force --features=stable
 
 Para que esto funcione, asegúrate de tener todas las dependencias instaladas (que se muestran arriba) en el sistema.
 

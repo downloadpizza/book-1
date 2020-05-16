@@ -11,9 +11,8 @@ Hola, y bienvenido al proyecto Nushell. El objectivo de este proyecto es tomar l
 
 Nu toma ideas de muchos territorios familiares: shells tradicionales como bash, shells avanzadas como PowerShell, programación funcional, programación de sistemas, y más. Pero, en lugar de ser un "Todo en uno", No enfoca su energía en hacer algunas cosas bien:
 
-* Crear una shell flexible de plataforma cruzada para la programadora moderna de la era GitHub
+* Crear una shell flexible de plataforma cruzada con un toque moderno.
 * Permitirte mezclar y combinar aplicaciones de línea de comandos con una shell que comprende la estructura de tus datos.
-* 
 * Tenga el brillo UX que proporcionan las aplicaciones modernas CLI.
 
 La manera más facil de ver qué puede hacer Nu es empezando con ejemplos, así que vamos a sumergirnos.

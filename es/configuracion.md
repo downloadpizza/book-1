@@ -11,11 +11,17 @@ Nu tiene un número pequeño, pero creciente, de variables internas que puedes e
 
 | Variable        | Tipo           | Descripción  |
 | ------------- | ------------- | ----- |
-| path | tabla de cadenas | PATH para usar en búsqueda de binarios |
-| env | fila | variables de entorno que serán pasadas a comandos externos |
+| completion_mode | "list" o "circular" | el estilo de autocompletar a usar |
 | ctrlc_exit | booleano | salir o no de Nu después de presionar ctrl-c varias veces |
-| table_mode | "light" o otro | habilitar tables livianas o normales |
+| disable_table_indexes | booleano | elimina la columna de índice de la tabla |
 | edit_mode | "vi" o "emacs" | cambia edición de línea a modo "vi" o "emacs" |
+| env | fila | variables de entorno que serán pasadas a comandos externos |
+| header_align | "center", "right", u otro | alinea los encabezados de la tabla alineados al centro, a la derecha o a la izquierda |
+| key_timeout | entero | el tiempo de espera utilizado para cambiar entre los modos de edición |
+| nonzero_exit_errors | booleano | si imprimir errores para códigos de salida no-ceros para externos |
+| path | tabla de cadenas | PATH para usar en búsqueda de binarios |
+| startup | lista de cadenas | comandos, como `alias`es, para ejecutar cuando nushell arranca |
+| table_mode | "light" o otro | habilitar tablas livianas o normales |
 
 ## Uso
 
@@ -104,11 +110,11 @@ Para usar Nu como shell de inicio de sesión, necesitarás configurar las variab
 Antes de cambiarlo, ejecuta Nu dentro de otra shell, como Bash. Luego, obtén el entorno y PATH desde esa shell con los siguientes comandos:
 
 ```
-> config --set [path $nu:path]
-> config --set [env $nu:env]
+> config --set [path $nu.path]
+> config --set [env $nu.env]
 ```
 
-`$nu:path` y `$nu:env` son variables especiales que están prestablecidas a las variables PATH y entorno actuales respectivamente. Una vez que las estableces a la configuración, estarán disponibles cuando uses Nu como shell de inicio de sesión.
+`$nu.path` y `$nu.env` son valores que están prestablecidas a las variables actuales de entorno y PATH, respectivamente. Una vez que las estableces a la configuración, estarán disponibles cuando uses Nu como shell de inicio de sesión.
 
 A continuación, en algunas distribuciones también deberás asegurarte de que Nu esté en la lista en `/etc/shells`:
 

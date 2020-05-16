@@ -1,21 +1,21 @@
 ---
 layout: content
-title: Nu map from functional languages
-prev: Imperative map 
-next: Operator map
-link_prev: /en/nushell_map_imperative.html
-link_next: /en/nushell_operator_map.html 
+title: Mapa nushell de lenguajes funcionales
+prev: Mapa imperativo
+next: Mapa de Operadores
+link_prev: /es/mapa_imperativo_nushell.html
+link_next: /es/mapa_operador_nushell.html 
 ---
 
-The idea behind this table is to help you understand how Nu built-ins and plug-ins relate to functional languages. We've tried to produce a map of all the Nu commands and what their equivalents are in other languages. Contributions are welcome.
+La idea detrás de esta tabla is ayudarte a entender como los comandos internos y plugins en Nu se relacionan con lenguajes funcionales. Hemos intentado producir un mapa de los comandos internos y sus equivalentes en otros lenguajes. Contribuciones son bienvenidas.
 
-Note: this table assumes Nu 0.14.1 or later.
+Nota: Esta tabla asume Nu 0.14.1 o posterior.
 
 
 | NuShell                | Clojure                       | Tablecloth (Ocaml / Elm)                             | Haskell                                    |
 | ---------------------- | ----------------------------- | ---------------------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
 | alias                  |                               |                                                      |                                            |                                                 |
-| append                 | conj, into, concat            | append, (++), concat, concatMap                      | (++)                                       |                                                 |
+| append                 | conj                          |                                                      | (++)                                       |                                                 |
 | args                   |                               |                                                      |                                            |                                                 |
 | autoview               |                               |                                                      |                                            |                                                 |
 | average(`*`)           |                               |                                                      |                                            |                                                 |
@@ -26,20 +26,20 @@ Note: this table assumes Nu 0.14.1 or later.
 | clip                   |                               |                                                      |                                            |                                                 |
 | compact                |                               |                                                      |                                            |                                                 |
 | config                 |                               |                                                      |                                            |                                                 |
-| count                  | count                         | length, size                                         | length, size                               |                                                 |
+| count                  | count                         | length                                               | length                                     |                                                 |
 | cp                     |                               |                                                      |                                            |                                                 |
 | date                   | java.time.LocalDate/now       |                                                      | Get-Date                                   |                                                 |
 | debug                  |                               |                                                      |                                            |                                                 |
 | default                |                               |                                                      |                                            |                                                 |
 | drop                   |                               |                                                      |                                            |                                                 |
 | du                     |                               |                                                      |                                            |                                                 |
-| each                   | map, mapv, iterate            | map, forEach                                         | map                                        |                                                 |
+| each                   | map                           | map                                                  | map                                        |                                                 |
 | echo                   | println                       |                                                      | putStrLn, print                            |                                                 |
 | enter                  |                               |                                                      |                                            |                                                 |
 | evaluate_by            |                               |                                                      |                                            |                                                 |
 | exit                   | System/exit                   |                                                      |                                            |                                                 |
 | fetch(`*`)             |                               |                                                      |                                            |                                                 |
-| first                  | first                         | head                                                 | head                                       |                                                 |
+| first                  | first                         |                                                      | head                                       |                                                 |
 | format                 | format                        |                                                      | Text.Printf.printf                         |                                                 |
 | from bson              |                               |                                                      |                                            |                                                 |
 | from csv               |                               |                                                      |                                            |                                                 |
@@ -58,57 +58,57 @@ Note: this table assumes Nu 0.14.1 or later.
 | from xml               |                               |                                                      |                                            |                                                 |
 | from yaml              |                               |                                                      |                                            |                                                 |
 | get                    |                               |                                                      |                                            |                                                 |
-| grep                   | filter, filterv, select       | filter, filterMap                                    | filter                                     |                                                 |
-| group_by               | group-by                      |                                                      | group, groupBy                             |                                                 |
+| grep                   | filter                        |                                                      | filter                                     |                                                 |
+| group_by               | group-by                      |                                                      |                                            |                                                 |
 | headers                |                               |                                                      |                                            |                                                 |
 | help                   | doc                           |                                                      |                                            |                                                 |
 | histogram              |                               |                                                      |                                            |                                                 |
 | history                |                               |                                                      |                                            |                                                 |
 | inc(`*`)               | inc                           |                                                      | succ                                       |                                                 |
 | insert                 |                               |                                                      |                                            |                                                 |
-| is_empty               | empty?                        | isEmpty                                              |                                            |                                                 |
-| keep                   | take, drop-last, pop          | take, init                                           | take, init                                 |                                                 |
+| is_empty               | empty?                        |                                                      |                                            |                                                 |
+| keep                   | take, drop-last, pop          |                                                      | init, take                                 |                                                 |
 | keep_until             |                               |                                                      |                                            |                                                 |
-| keep_while             | take-while                    | takeWhile                                            | takeWhile                                  |                                                 |
+| keep_while             |                               |                                                      |                                            |                                                 |
 | kill                   |                               |                                                      |                                            |                                                 |
-| last                   | last, peek, take-last         | last                                                 | last                                       |                                                 |
+| last                   | last, peek                    |                                                      | last                                       |                                                 |
 | lines                  |                               |                                                      | lines, words, split-with                   |                                                 |
 | ls                     |                               |                                                      |                                            |                                                 |
 | map_max_by             |                               |                                                      |                                            |                                                 |
-| match(`*`)             | re-matches, re-seq, re-find   |                                                      |                                            |                                                 |
+| match(`*`)             |                               |                                                      |                                            |                                                 |
 | merge                  |                               |                                                      |                                            |                                                 |
 | mkdir                  |                               |                                                      |                                            |                                                 |
 | mv                     |                               |                                                      |                                            |                                                 |
 | next                   |                               |                                                      |                                            |                                                 |
-| nth                    | nth                           | Array.get                                            | lookup                                     |                                                 |
-| open                   | with-open                     |                                                      |                                            |                                                 |
+| nth                    | nth                           |                                                      |                                            |                                                 |
+| open                   |                               |                                                      |                                            |                                                 |
 | parse                  |                               |                                                      |                                            |                                                 |
 | pivot                  | (apply mapv vector matrix)    |                                                      | transpose                                  |                                                 |
 | post(`*`)              |                               |                                                      |                                            |                                                 |
-| prepend                | cons                          | cons, ::                                             | ::                                         |                                                 |
+| prepend                | cons                          |                                                      |                                            |                                                 |
 | prev                   |                               |                                                      |                                            |                                                 |
 | ps(`*`)                |                               |                                                      |                                            |                                                 |
 | pwd                    |                               |                                                      |                                            |                                                 |
-| range                  | range                         | range                                                | 1..10, 'a'..'f'                            |                                                 |
-| reduce_by              | reduce, reduce-kv             | foldr                                                | foldr                                      |                                                 |
+| range                  |                               |                                                      | 1..10, 'a'..'f'                            |                                                 |
+| reduce_by              |                               |                                                      |                                            |                                                 |
 | reject                 |                               |                                                      |                                            |                                                 |
 | rename                 |                               |                                                      |                                            |                                                 |
-| reverse                | reverse, rseq                 | reverse, reverseInPlace                              | reverse                                    |                                                 |
+| reverse                |                               |                                                      |                                            |                                                 |
 | rm                     |                               |                                                      |                                            |                                                 |
 | save                   |                               |                                                      |                                            |                                                 |
 | select(`***`)          | select-keys                   |                                                      |                                            |                                                 |
 | shells                 |                               |                                                      |                                            |                                                 |
 | shuffle                | shuffle                       |                                                      |                                            |                                                 |
-| size                   | count                         |                                                      | size, length                               |                                                 |
-| skip                   | rest                          | tail                                                 | tail                                       |                                                 |
+| size                   | count                         |                                                      |                                            |                                                 |
+| skip                   | rest                          |                                                      | tail                                       |                                                 |
 | skip_until             |                               |                                                      |                                            |                                                 |
-| skip_while             | drop-while                    | dropWhile                                            | dropWhile, dropWhileEnd                    |                                                 |
-| sort-by                | sort, sort-by, sorted-set-by  | sort, sortBy, sortWith                               | sort, sortBy                               |                                                 |
-| split_by               | split, split-{at,with,lines}  | split, words, lines                                  | split, words, lines                        |                                                 |
+| skip_while             |                               |                                                      |                                            |                                                 |
+| sort-by                | sort-by                       |                                                      |                                            |                                                 |
+| split_by               |                               |                                                      |                                            |                                                 |
 | split_column           |                               |                                                      |                                            |                                                 |
 | split_row              |                               |                                                      |                                            |                                                 |
-| str(`*`)               | clojure.string functions      | String functions                                     |                                            |                                                 |
-| sum                    | apply +                       |                                                      |                                            |                                                 |
+| str(`*`)               | clojure.string functions      |                                                      |                                            |                                                 |
+| sum                    |                               |                                                      |                                            |                                                 |
 | sys(`*`)               |                               |                                                      |                                            |                                                 |
 | table                  |                               |                                                      |                                            |                                                 |
 | tags                   |                               |                                                      |                                            |                                                 |
@@ -125,13 +125,13 @@ Note: this table assumes Nu 0.14.1 or later.
 | to url                 |                               |                                                      |                                            |                                                 |
 | to yaml                |                               |                                                      |                                            |                                                 |
 | touch                  |                               |                                                      |                                            |                                                 |
-| trim                   | trim, triml, trimr            | trim, trimLeft, trimRight                            | strip                                      |                                                 |
-| uniq                   | set                           | Set.empty                                            | Data.Set                                   |                                                 |
+| trim                   |                               |                                                      |                                            |                                                 |
+| uniq                   |                               |                                                      |                                            |                                                 |
 | update(`**`)           |                               |                                                      |                                            |                                                 |
 | version                |                               |                                                      |                                            |                                                 |
 | with_env               |                               |                                                      |                                            |                                                 |
 | what                   |                               |                                                      |                                            |                                                 |
-| where                  | filter, filterv, select       | filter, filterMap                                    | filter                                     |                                                 |
+| where                  | filter                        |                                                      | filter                                     |                                                 |
 | which                  |                               |                                                      |                                            |                                                 |
 | wrap                   |                               |                                                      |                                            |                                                 |
 
