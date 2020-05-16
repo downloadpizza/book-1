@@ -7,18 +7,18 @@ link_prev: /en/coming_from_bash.html
 link_next: /en/nushell_map_imperative.html 
 ---
 
-The idea behind this table is to help you understand how NuShell built-ins and plug-ins relate to other known shells and domain specific languages. We've tried to produce a map of all the nushell commands and what their equivalents are in other languages. Contributions are welcome.
+The idea behind this table is to help you understand how NuShell built-ins and plug-ins relate to other known shells and domain specific languages. We've tried to produce a map of all the NuShell commands and what their equivalents are in other languages. Contributions are welcome.
 
-Note: this table assumes Nushell 0.13.1 or later.
+Note: this table assumes NuShell 0.13.1 or later.
 
 
 | NuShell                | SQL                           | .Net LINQ (C#)                                       | PowerShell (without external modules)      | Bash                                            |
 | ---------------------- | ----------------------------- | ---------------------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
 | alias                  | N/A                           | N/A                                                  | alias                                      | alias                                           |
-| append                 | N/A                           | Append()                                             | -Append                                    |                                                 |
+| append                 | N/A                           | Append                                               | -Append                                    |                                                 |
 | args                   | N/A                           | N/A                                                  |                                            |                                                 |
 | autoview               | N/A                           | N/A                                                  |                                            |                                                 |
-| average(`*`)           | avg                           | Average()                                            | Measure-Object, measure                    |                                                 |
+| average(`*`)           | avg                           | Average                                              | Measure-Object, measure                    |                                                 |
 | binaryview(`*`)        | N/A                           |                                                      | Format-Hex                                 |                                                 |
 | calc, = math           | math operators                | Aggregate, Average, Count, Max, Min, Sum             |                                            | bc                                              |
 | cd                     | N/A                           | N/A                                                  | Set-Location, cd                           | cd                                              |
@@ -41,7 +41,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | exit                   | N/A                           |                                                      | exit                                       | exit                                            |
 | fetch(`*`)             | N/A                           | HttpClient,WebClient, HttpWebRequest/Response        | Invoke-WebRequest                          | wget                                            |
 | first                  | top, limit                    | First, FirstOrDefault                                | Select-Object -First                       | head                                            |
-| format                 |                               | String.Format()                                      | String.Format()                            |                                                 |
+| format                 |                               | String.Format                                        | String.Format()                            |                                                 |
 | from bson              | N/A                           | N/A                                                  | N/A                                        |                                                 |
 | from csv               | import flatfile               | N/A                                                  | Import-Csv, ConvertFrom-Csv                |                                                 |
 | from eml               | N/A                           | N/A                                                  | N/A                                        |                                                 |
@@ -91,7 +91,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | ps(`*`)                | N/A                           | N/A                                                  | Get-Process, ps, gps                       | ps                                              |
 | pwd                    | N/A                           | N/A                                                  | Get-Location, pwd                          | pwd                                             |
 | range                  |                               | Range                                                | 1..10, 'a'..'f'                            |                                                 |
-| reduce_by              |                               |                                                      |                                            |                                                 |
+| reduce_by              |                               | Aggregate                                            |                                            |                                                 |
 | reject                 |                               |                                                      |                                            |                                                 |
 | rename                 | N/A                           | N/A                                                  | Rename-Item, ren, rni                      | mv                                              |
 | reverse                |                               | Reverse                                              | [Array]::Reverse($var)                     |                                                 |
@@ -126,7 +126,7 @@ Note: this table assumes Nushell 0.13.1 or later.
 | to url                 | N/A                           | N/A                                                  | N/A                                        |                                                 |
 | to yaml                | N/A                           | N/A                                                  | N/A                                        |                                                 |
 | touch                  | N/A                           | N/A                                                  | Set-Content                                | touch                                           |
-| trim                   | rtrim, ltrim                  | String.Trim()                                        | String.Trim()                              |                                                 |
+| trim                   | rtrim, ltrim                  | Trim, TrimStart, TrimEnd                             | String.Trim()                              |                                                 |
 | uniq                   | distinct                      | Distinct                                             | Get-Unique, gu                             | uniq                                            |
 | update(`**`)           | As                            | N/A                                                  |                                            |                                                 |
 | version                | select @@version              | N/A                                                  | $PSVersionTable                            |                                                 |
