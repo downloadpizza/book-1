@@ -28,7 +28,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | config                 |                               |                                                      |                                            |                                                 |
 | count                  | count                         | length, size                                         | length, size                               |                                                 |
 | cp                     |                               |                                                      |                                            |                                                 |
-| date                   | java.time.LocalDate/now       |                                                      | Get-Date                                   |                                                 |
+| date                   | java.time.LocalDate/now       |                                                      |                                            |                                                 |
 | debug                  |                               |                                                      |                                            |                                                 |
 | default                |                               |                                                      |                                            |                                                 |
 | drop                   |                               |                                                      |                                            |                                                 |
@@ -93,7 +93,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | split_column           |                               |                                                      |                                            |                                                 |
 | split_row              |                               |                                                      |                                            |                                                 |
 | str(`*`)               | clojure.string functions      | String functions                                     |                                            |                                                 |
-| sum                    | apply +                       |                                                      |                                            |                                                 |
+| sum                    | apply +                       | sum                                                  | sum                                        |                                                 |
 | sys(`*`)               |                               |                                                      |                                            |                                                 |
 | table                  |                               |                                                      |                                            |                                                 |
 | tags                   |                               |                                                      |                                            |                                                 |
