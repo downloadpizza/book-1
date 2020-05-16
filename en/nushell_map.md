@@ -41,7 +41,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | exit                   |   -                           |                                                      | exit                                       | exit                                            |
 | fetch(`*`)             |   -                           | HttpClient,WebClient, HttpWebRequest/Response        | Invoke-WebRequest                          | wget                                            |
 | first                  | top, limit                    | First, FirstOrDefault                                | Select-Object -First                       | head                                            |
-| format                 |                               | String.Format                                        | String.Format()                            |                                                 |
+| format                 |                               | String.Format                                        | String.Format                              |                                                 |
 | from                   | import flatfile, openjson, cast(variable as xml) |   -                               | Import/ConvertFrom-{Csv,Xml,Html,Json}     |                                                 |
 | get                    |                               | Select                                               | (cmd).column                               |                                                 |
 | grep                   | filter                        | filter                                               | filter                                     | filter                                          |
@@ -52,13 +52,13 @@ Note: this table assumes Nu 0.14.1 or later.
 | history                |   -                           |   -                                                  | Get-History, history                       | history                                         |
 | inc(`*`)               |   -                           |                                                      |   -                                        |   -                                             |
 | insert                 |                               |                                                      | Add-Member                                 |                                                 |
-| is_empty               | is null                       | String.InNullOrEmpty()                               | String.InNullOrEmpty()                     |                                                 |
+| is_empty               | is null                       | String.InNullOrEmpty                                 | String.InNullOrEmpty                       |                                                 |
 | keep, =take            | top, limit                    | Take                                                 | Select-Object -First                       | head                                            |
 | keep_until             |                               |                                                      |                                            |                                                 |
 | keep_while             |                               | TakeWhile                                            |                                            |                                                 |
 | kill                   |   -                           |   -                                                  | Stop-Process, kill                         | kill                                            |
 | last                   |                               | Last, LastOrDefault                                  | Select-Object -Last                        | tail                                            |
-| lines                  |   -                           |   -                                                  | File.ReadAllLines()                        |                                                 |
+| lines                  |   -                           |   -                                                  | File.ReadAllLines                          |                                                 |
 | ls                     |   -                           |   -                                                  | Get-ChildItem, dir, ls                     | ls                                              |
 | map_max_by             |                               |                                                      |                                            |                                                 |
 | match(`*`)             | case when                     | Regex.IsMatch                                        | [regex]                                    |                                                 |
@@ -66,7 +66,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | mkdir                  |   -                           |   -                                                  | mkdir, md                                  | mkdir                                           |
 | mv                     |   -                           |   -                                                  | Move-Item, mv, move, mi                    | mv                                              |
 | next                   |                               |                                                      |                                            |                                                 |
-| nth                    | limit x offset y, rownumber = | ElemantAt(x)                                         | [x], indexing operator, ElementAt(x)       |                                                 |
+| nth                    | limit x offset y, rownumber = | ElementAt                                            | [x], indexing operator, ElementAt          |                                                 |
 | open                   |                               |                                                      | Get-Content, gc, cat, type                 | cat                                             |
 | parse                  |                               |                                                      |                                            |                                                 |
 | pivot, =transpose      | pivot                         |   -                                                  |                                            |                                                 |
@@ -90,11 +90,11 @@ Note: this table assumes Nu 0.14.1 or later.
 | skip_until             |                               |                                                      |                                            |                                                 |
 | skip_while             |                               | SkipWhile                                            |                                            |                                                 |
 | sort-by                | order by                      | OrderBy, OrderByDescending, ThenBy, ThenByDescending | Sort-Object, sort                          |                                                 |
-| split_by               |                               | String.Split()                                       | String.Split()                             |                                                 |
+| split_by               |                               | Split                                                | Split                                      |                                                 |
 | split_column           |                               |   -                                                  |                                            |                                                 |
 | split_row              |                               |   -                                                  |                                            |                                                 |
 | str(`*`)               | string functions              | String class                                         | String class                               |                                                 |
-| sum                    | sum                           | Sum()                                                | Measure-Object, measure                    |                                                 |
+| sum                    | sum                           | Sum                                                  | Measure-Object, measure                    |                                                 |
 | sys(`*`)               |   -                           |   -                                                  | Get-ComputerInfo                           | uname, lshw, lsblk, lscpu, lsusb, hdparam, free |
 | table                  |                               |                                                      | Format-Table, ft, Format-List, fl          |                                                 |
 | tags                   |   -                           |   -                                                  |   -                                        |                                                 |
@@ -102,7 +102,7 @@ Note: this table assumes Nu 0.14.1 or later.
 | tree(`*`)              |   -                           |   -                                                  | tree                                       |                                                 |
 | to                     |   -                           |   -                                                  | Export/ConvertTo-{Csv,Xml,Html,Json}       |                                                 |
 | touch                  |   -                           |   -                                                  | Set-Content                                | touch                                           |
-| trim                   | rtrim, ltrim                  | Trim, TrimStart, TrimEnd                             | String.Trim()                              |                                                 |
+| trim                   | rtrim, ltrim                  | Trim, TrimStart, TrimEnd                             | Trim                                       |                                                 |
 | uniq                   | distinct                      | Distinct                                             | Get-Unique, gu                             | uniq                                            |
 | update(`**`)           | As                            |   -                                                  |                                            |                                                 |
 | version                | select @@version              |   -                                                  | $PSVersionTable                            |                                                 |
