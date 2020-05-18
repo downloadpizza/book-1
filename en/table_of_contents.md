@@ -15,7 +15,7 @@ link_next: /en/installation.html
 * [Working with tables](working_with_tables.md) - Working with nushell tables
 * [Pipeline](pipeline.md) - How the pipeline works
 * [Configuration](configuration.md) - How to configure nushell
-* [Aliases](aliases.md) - Added aliases for blocks of commands
+* [Aliases](aliases.md) - Aliases for blocks of commands
 * [Math](math.md) - Math operations in nushell
 * [Environment](environment.md) - Working with environment variables
 * [Metadata](metadata.md) - An explanation of nushell's metadata system

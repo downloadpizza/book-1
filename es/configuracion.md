@@ -1,6 +1,6 @@
 ---
 layout: content
-title: Configuracion
+title: Configuración
 prev: Pipeline
 next: Metadatos
 link_prev: /es/pipeline.html
