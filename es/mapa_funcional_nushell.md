@@ -135,6 +135,6 @@ Nota: Esta tabla asume Nu 0.14.1 o posterior.
 | which                  |                               |                                                      |                                            |                                                 |
 | wrap                   |                               |                                                      |                                            |                                                 |
 
-* `*` - these commands are part of the standard plugins
-* `**` - renamed from `edit` to `update` in 0.13.1
-* `***` - renamed from `pick` to `select` in 0.13.1
+* `*` - Pertenecen de los plugins standard
+* `**` - renombrada de `edit` a `update` en 0.13.1
+* `***` - renombrada de `pick` a `select` en 0.13.1

@@ -11,7 +11,7 @@ Sometimes you just need to add a few numbers when you're working on a task.  Nu 
 
 To get into "math mode", you start the command with an `=`.  This lets Nu know what you're about to write will use operators.  Some commands, like `where` will do this for you so that you don't have to.
 
-## Add, Subtract, Multiple, Divide
+## Add, Subtract, Multiply, Divide
 
 ```
 > = 1 + 3
@@ -26,7 +26,7 @@ You can use parentheses to group math expression in math mode. This allows you t
 
 ## `in:` and `not-in:`
 
-You can check is value is one of a set of values, or not one of a set of values, using the `in:` and `not-in:` operators.
+You can check if a value is in a set of values or not using the `in:` and `not-in:` operators.
 
 ```
 > = 1 in: [1 2 3]

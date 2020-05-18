@@ -29,7 +29,7 @@ You can also temporarily update an environment variable when you run a command o
 BAR
 ```
 
-The `with-env` command will temporarily set the environment variable to the value give (here: the variable "FOO" is given the value "BAR").  Once this is done, the block will run with this new environment variable set.
+The `with-env` command will temporarily set the environment variable to the value given (here: the variable "FOO" is given the value "BAR").  Once this is done, the block will run with this new environment variable set.
 
 A common shorthand, inspired by Bash and others, is also available. You can write the above example as:
 

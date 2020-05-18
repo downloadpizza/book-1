@@ -1,6 +1,6 @@
 ---
 layout: content
-title: Introduccion
+title: Introducción
 prev: Instalación
 next: Explorando
 link_prev: /es/instalacion.html
