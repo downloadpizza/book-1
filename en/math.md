@@ -65,5 +65,5 @@ The following comparisons are also available:
 
 ## Compound operators
 
-Nushell also supports `&&` and `||` to join two operations that return boolean values, using 'and' and 'or' respectively.  For example: `ls | where name in: ["one", "two", "three"] && size > 10kb`
+Nushell also supports `&&` and `||` to join two operations that return boolean values, using 'and' and 'or' respectively.  For example: `ls | where name in: ["one" "two" "three"] && size > 10kb`
 
