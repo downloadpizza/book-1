@@ -15,6 +15,9 @@ link_next: /es/instalacion.html
 * [Trabajando con tablas](trabajando_con_tablas.md) - Trabajando con tablas nushell
 * [Pipeline](pipeline.md) - Cómo funciona el pipeline
 * [Configuración](configuracion.md) - Cómo configurar nushell
+* [Aliases](aliases.md) - Aliases para bloques de comandos
+* [Matemáticas](matematicas.md) - Operaciones matemáticas en nushell
+* [Entorno](entorno.md) - Trabajando con variables de entorno
 * [Metadatos](metadatos.md) - Una explicación del sistema de metadatos en nushell
 * [Shells](shells_en_shells.md) - Trabajando con múltiples ubicaciones
 * [Escapando commandos](escapando.md) - Escapando a comandos nativos de mismo nombre

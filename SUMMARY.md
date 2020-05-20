@@ -7,6 +7,9 @@
   * [Working with tables](en/working_with_tables.md) - Working with nushell tables
   * [Pipeline](en/pipeline.md) - How the pipeline works
   * [Configuration](en/configuration.md) - How to configure nushell
+  * [Aliases](en/aliases.md) - Aliases for blocks of commands
+  * [Math](en/math.md) - Math operations in nushell
+  * [Environment](en/environment.md) - Working with environment variables
   * [Metadata](en/metadata.md) - An explanation of nushell's metadata system
   * [Shells](en/shells_in_shells.md) - Working with multiple locations
   * [Escaping commands](en/escaping.md) - Escaping to native commands of the same name 
@@ -25,6 +28,10 @@
   * [Cargando datos](es/cargando_datos.md) - Cargando datos y usándola
   * [Trabajando con tablas](es/trabajando_con_tablas.md) - Trabajando con tablas nushell
   * [Pipeline](es/pipeline.md) - Cómo funciona el pipeline
+  * [Configuración](es/configuracion.md) - Cómo configurar nushell
+  * [Aliases](es/aliases.md) - Aliases para bloques de comandos
+  * [Matemáticas](es/matematicas.md) - Operaciones matemáticas en nushell
+  * [Entorno](es/entorno.md) - Trabajando con variables de entorno
   * [Metadatos](es/metadatos.md) - Una explicación del sistema de metadatos en nushell
   * [Shells en shells](es/shells_en_shells.md) - Trabajando con múltiples ubicaciones
   * [Escapando](es/escapando.md) - Escapando a comandos nativos de mismo nombre

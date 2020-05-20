@@ -15,7 +15,7 @@ link_next: /en/installation.html
 * [Working with tables](working_with_tables.md) - Working with Nu tables
 * [Pipeline](pipeline.md) - How the pipeline works
 * [Configuration](configuration.md) - How to configure Nu
-* [Aliases](aliases.md) - Added aliases for blocks of commands
+* [Aliases](aliases.md) - Aliases for blocks of commands
 * [Math](math.md) - Math operations in Nu
 * [Environment](environment.md) - Working with environment variables
 * [Metadata](metadata.md) - An explanation of Nu's metadata system
