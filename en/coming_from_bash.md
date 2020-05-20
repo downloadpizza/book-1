@@ -2,12 +2,12 @@
 layout: content
 title: Coming from Bash
 prev: Plugins
-next: Nushell Map From Shells and DSLs Languages
+next: Shells/DSL map
 link_prev: /en/plugins.html
 link_next: /en/nushell_map.html
 ---
 
-Note: this table assumes Nushell 0.14.1 or later.
+Note: this table assumes Nu 0.14.1 or later.
 
 | Bash        | Nu           | Task  |
 | ------------- | ------------- | ----- |
