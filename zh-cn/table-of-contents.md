@@ -8,7 +8,7 @@ link_next: /zh-cn/installation.html
 ---
 
 * [安装](installation.md) - 安装 nushell
-* [Introduction](introduction.md) - Getting started
+* [介绍](introduction.md) - 开始使用
 * [Moving around](moving_around.md) - Moving around in nushell
 * [Types of data](types_of_data.md) - Types of data in nushell
 * [Loading data](loading_data.md) - Loading data and using it
