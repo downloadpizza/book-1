@@ -9,8 +9,8 @@ link_next: /zh-cn/installation.html
 
 * [安装](installation.md) - 安装 nushell
 * [介绍](introduction.md) - 开始使用
-* [Moving around](moving_around.md) - Moving around in nushell
-* [Types of data](types_of_data.md) - Types of data in nushell
+* [四处移动](moving_around.md) - 在 nushell 中四处移动
+* [数据类型](types_of_data.md) - nushell 中的数据类型
 * [Loading data](loading_data.md) - Loading data and using it
 * [Working with tables](working_with_tables.md) - Working with nushell tables
 * [Pipeline](pipeline.md) - How the pipeline works
