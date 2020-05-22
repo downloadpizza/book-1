@@ -65,3 +65,8 @@
   * [Shells](pt-BR/shells_em_shells.md) - Trabalhando com múltiplos locais
   * [Escapando comandos](pt-BR/escapando.md) - Escapando para comandos nativos com o mesmo nome
   * [Plugins](pt-BR/plugins.md) - Melhorando o nushell com mais funcionalidades usando plugins
+* [官话](zh-cn/README.md)
+  * [安装](installation.md) - 安装 nushell
+  * [介绍](introduction.md) - 开始使用
+  * [四处移动](moving_around.md) - 在 nushell 中四处移动
+  * [数据类型](types_of_data.md) - nushell 中的数据类型
