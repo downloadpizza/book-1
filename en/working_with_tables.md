@@ -186,11 +186,11 @@ We can use the `add` command to add a new column to the table. Let's look at an 
 Let's add an column called "next_edition" with the value 2021:
 
 ```
-> open rustfmt.toml | insert next_addition 2021
-───────────────┬──────
- edition       │ 2018 
- next_addition │ 2021 
-───────────────┴──────
+> open rustfmt.toml | insert next_edition 2021
+──────────────┬──────
+ edition      │ 2018 
+ next_edition │ 2021 
+──────────────┴──────
 ```
 
 Notice that we if open the original file, the contents have stayed the same:
@@ -208,10 +208,10 @@ pipeline until we're ready to write out the result with any changes we'd like if
 ```
 > open rustfmt.toml | insert next_edition 2021 | save rustfmt2.toml
 > open rustfmt2.toml
-───────────────┬──────
- edition       │ 2018 
- next_addition │ 2021 
-───────────────┴──────
+──────────────┬──────
+ edition      │ 2018 
+ next_edition │ 2021 
+──────────────┴──────
 ```
 
 ### Updating a column
