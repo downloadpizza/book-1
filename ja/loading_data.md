@@ -82,12 +82,12 @@ Antonio | Vivaldi | Composer
 ---+------------------------------
 ```
 
-テーブルにもどってきたので、ラインで作業していることがわかります。次のステップは、行をもうすこし便利なものに分割できるかみてみることです。そのために、`split-column`コマンドを利用します。名前からわかるように、`split-column`は区切り記号を含む文字列を列に分割する方法を提供します。区切り文字列が何であるかを指定するだけでよいのです。
+テーブルにもどってきたので、ラインで作業していることがわかります。次のステップは、行をもうすこし便利なものに分割できるかみてみることです。そのために、`split column`コマンドを利用します。名前からわかるように、`split column`は区切り記号を含む文字列を列に分割する方法を提供します。区切り文字列が何であるかを指定するだけでよいのです。
 
 
 
 ```
-> open people.txt | lines | split-column "|"
+> open people.txt | lines | split column "|"
 ---+----------+-----------+-----------
  # | Column1  | Column2   | Column3
 ---+----------+-----------+-----------
@@ -100,7 +100,7 @@ Antonio | Vivaldi | Composer
 ほとんど正しいように見えますが、余分なスペースを含んでいます。区切り文字を変更してみましょう。
 
 ```
-> open people.txt | lines | split-column " | "
+> open people.txt | lines | split column " | "
 ---+---------+---------+----------
  # | Column1 | Column2 | Column3
 ---+---------+---------+----------
@@ -110,10 +110,10 @@ Antonio | Vivaldi | Composer
 ---+---------+---------+----------
 ```
 
-悪くありません。`split-column`はデフォルトの列名もつけてくれます。
+悪くありません。`split column`はデフォルトの列名もつけてくれます。
 
 ```
-> open people.txt | lines | split-column " | " | get Column1
+> open people.txt | lines | split column " | " | get Column1
 ---+---------
  # | value
 ---+---------
@@ -126,7 +126,7 @@ Antonio | Vivaldi | Composer
 デフォルトの名前を利用するかわりに、列に名前をつけることもできます。
 
 ```
-> open people.txt | lines | split-column " | " first_name last_name job
+> open people.txt | lines | split column " | " first_name last_name job
 ---+------------+-----------+----------
  # | first_name | last_name | job
 ---+------------+-----------+----------
@@ -139,7 +139,7 @@ Antonio | Vivaldi | Composer
 データをテーブルに変換できたので、これまでテーブルに利用してきたすべてのコマンドをつかうことができます。
 
 ```
-> open people.txt | lines | split-column " | " first_name last_name job | sort-by first_name
+> open people.txt | lines | split column " | " first_name last_name job | sort-by first_name
 ---+------------+-----------+----------
  # | first_name | last_name | job
 ---+------------+-----------+----------
@@ -150,8 +150,6 @@ Antonio | Vivaldi | Composer
 ```
 
 文字列を操作するために使用できるその他のコマンドです。
-
-* split-row
 * str
 * lines
 * size

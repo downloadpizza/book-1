@@ -82,10 +82,10 @@ Lo primero que queremos hacer al cargar el archivo es trabajarlo línea por lín
 ---+------------------------------
 ```
 
-Podemos darnos cuenta que estamos trabajando con las líneas porque estamos de vuelta a una tabla. Nuestro próximo paso es mirar si podemos dividir las filas a algo más útil. Para eso, usaremos el comando `split-column`. `split-column`, como implica el nombre, nos da una manera de dividir una cadena delimitada a columnas. Indicamos cuál es el delimitador y hace el resto:
+Podemos darnos cuenta que estamos trabajando con las líneas porque estamos de vuelta a una tabla. Nuestro próximo paso es mirar si podemos dividir las filas a algo más útil. Para eso, usaremos el comando `split`. `split`, como implica el nombre, nos da una manera de dividir una cadena delimitada. Usaremos el subcomando `column` para dividir el contenido a varias columnas. Indicamos cuál es el delimitador y se hace el resto:
 
 ```
-> open gente.txt | lines | split-column "|"
+> open gente.txt | lines | split column "|"
 ---+----------+-----------+-----------
  # | Column1  | Column2   | Column3 
 ---+----------+-----------+-----------
@@ -98,7 +98,7 @@ Podemos darnos cuenta que estamos trabajando con las líneas porque estamos de v
 Casi se ve correcto. Parece que hay espacio extra ahí. Cambiemos nuestro delimitador:
 
 ```
-> open gente.txt | lines | split-column " | "
+> open gente.txt | lines | split column " | "
 ---+---------+---------+----------
  # | Column1 | Column2 | Column3 
 ---+---------+---------+----------
@@ -108,10 +108,10 @@ Casi se ve correcto. Parece que hay espacio extra ahí. Cambiemos nuestro delimi
 ---+---------+---------+----------
 ```
 
-Nada mal. El comando `split-column` nos da datos que podemos usar. Adicionalmente nos crea nombres de columnas predeterminadas:
+Nada mal. El comando `split` nos da datos que podemos usar. Adicionalmente nos crea nombres de columnas predeterminadas:
 
 ```
-> open gente.txt | lines | split-column " | " | get Column1
+> open gente.txt | lines | split column " | " | get Column1
 ---+---------
  # | value 
 ---+---------
@@ -124,7 +124,7 @@ Nada mal. El comando `split-column` nos da datos que podemos usar. Adicionalment
 También podemos nombrar nuestras columnas en vez de usar nombres predeterminados:
 
 ```
-> open gente.txt | lines | split-column " | " primer_nombre apellido trabajo
+> open gente.txt | lines | split column " | " primer_nombre apellido trabajo
 ---+---------------+-----------+----------
  # | primer_nombre | apellido  | trabajo 
 ---+---------------+-----------+----------
@@ -137,7 +137,7 @@ También podemos nombrar nuestras columnas en vez de usar nombres predeterminado
 Ahora que tenemos nuestros datos en una tabla podemos usar todos los comandos que hemos usado en tablas antes:
 
 ```
-> open gente.txt | lines | split-column " | " primer_nombre apellido trabajo | sort-by primer_nombre
+> open gente.txt | lines | split column " | " primer_nombre apellido trabajo | sort-by primer_nombre
 ---+---------------+-----------+----------
  # | primer_nombre | apellido  | trabajo 
 ---+---------------+-----------+----------
@@ -148,7 +148,6 @@ Ahora que tenemos nuestros datos en una tabla podemos usar todos los comandos qu
 ```
 
 Hay otros comandos que puedes usar para trabajar con cadenas:
-* split-row
 * str
 * lines
 * size
@@ -165,7 +164,9 @@ name = "adhoc_derive"
 version = "0.1.2"
 ```
 
-El archivo "Cargo.lock" es un archivo en formato .toml pero la extensión del archivo no es .toml. Está bien, podemos usar el comando `from-toml`:
+The `from` command can be used for each of the structured data text formats that Nu can open and understand by passing it the supported format as a subcommand.
+
+El archivo "Cargo.lock" es un archivo en formato .toml pero la extensión del archivo no es .toml. Está bien, podemos usar el comando `from` usando el subcomando `toml`:
 
 ```
 > open Cargo.lock | from-toml
@@ -176,7 +177,7 @@ El archivo "Cargo.lock" es un archivo en formato .toml pero la extensión del ar
 ----------+-------------
 ```
 
-Hay el comando `from-` para cada dato estructurado de formatos de texto que Nu puede abrir y entender.
+El comando `from` se puede usar para cada dato estructurado de formatos de texto que Nu pueda abrir y entender pasando el formato soportado como subcomando.
 
 ## Abriendo en modo crudo
 
