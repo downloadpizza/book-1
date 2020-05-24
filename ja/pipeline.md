@@ -2,7 +2,7 @@
 layout: content
 title: パイプライン
 prev: テーブル
-next: メタデータ
+next: 設定
 link_prev: /ja/working_with_tables.html
 link_next: /ja/configuration.html
 ---
