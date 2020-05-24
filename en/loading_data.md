@@ -87,10 +87,10 @@ The first thing we want to do when bringing in the file is to work with it a lin
 ───┴──────────────────────────────
 ```
 
-We can see that we're working with the lines because we're back into a table. Our next step is to see if we can split up the rows into something a little more useful. For that, we'll use the `split-column` command. `split-column`, as the name implies, gives us a way to split a delimited string into columns. We tell it what the delimiter is, and it does the rest:
+We can see that we're working with the lines because we're back into a table. Our next step is to see if we can split up the rows into something a little more useful. For that, we'll use the `split` command. `split`, as the name implies, gives us a way to split a delimited string. We will use `split`'s `column` subcommand to split the contents across multiple columns. We tell it what the delimiter is, and it does the rest:
 
 ```
-> open people.txt | lines | split-column "|"
+> open people.txt | lines | split column "|"
 ───┬──────────┬───────────┬───────────
  # │ Column1  │ Column2   │ Column3 
 ───┼──────────┼───────────┼───────────
@@ -103,7 +103,7 @@ We can see that we're working with the lines because we're back into a table. Ou
 That almost looks correct. Looks like there is extra space there. Let's `trim` that extra space:
 
 ```
-> open people.txt | lines | split-column "|" | trim
+> open people.txt | lines | split column "|" | trim
 ───┬─────────┬─────────┬──────────
  # │ Column1 │ Column2 │ Column3 
 ───┼─────────┼─────────┼──────────
@@ -113,10 +113,10 @@ That almost looks correct. Looks like there is extra space there. Let's `trim` t
 ───┴─────────┴─────────┴──────────
 ```
 
-Not bad. The `split-column` command gives us data we can use. It also goes ahead and gives us default column names:
+Not bad. The `split` command gives us data we can use. It also goes ahead and gives us default column names:
 
 ```
-> open people.txt | lines | split-column "|" | trim | get Column1
+> open people.txt | lines | split column "|" | trim | get Column1
 ───┬─────────
  0 │ Octavia 
  1 │ Bob 
@@ -127,7 +127,7 @@ Not bad. The `split-column` command gives us data we can use. It also goes ahead
 We can also name our columns instead of using the default names:
 
 ```
-> open people.txt | lines | split-column "|" first_name last_name job | trim 
+> open people.txt | lines | split column "|" first_name last_name job | trim 
 ───┬────────────┬───────────┬──────────
  # │ first_name │ last_name │ job 
 ───┼────────────┼───────────┼──────────
@@ -140,7 +140,7 @@ We can also name our columns instead of using the default names:
 Now that our data is in a table, we can use all the commands we've used on tables before:
 
 ```
-> open people.txt | lines | split-column "|" first_name last_name job | trim | sort-by first_name
+> open people.txt | lines | split column "|" first_name last_name job | trim | sort-by first_name
 ───┬────────────┬───────────┬──────────
  # │ first_name │ last_name │ job 
 ───┼────────────┼───────────┼──────────
@@ -151,7 +151,6 @@ Now that our data is in a table, we can use all the commands we've used on table
 ```
 
 There are other commands you can use to work with strings:
-* split-row
 * str
 * lines
 * size
@@ -168,7 +167,7 @@ name = "adhoc_derive"
 version = "0.1.2"
 ```
 
-The "Cargo.lock" file is actually a .toml file, but the file extension isn't .toml. That's okay, we can use the `from-toml` command:
+The "Cargo.lock" file is actually a .toml file, but the file extension isn't .toml. That's okay, we can use the `from` command using the `toml` subcommand:
 
 ```
 > open Cargo.lock | from toml
@@ -178,7 +177,7 @@ The "Cargo.lock" file is actually a .toml file, but the file extension isn't .to
 ──────────┴───────────────────
 ```
 
-There is a `from-` command for each of the structured data text formats that Nu can open and understand.
+The `from` command can be used for each of the structured data text formats that Nu can open and understand by passing it the supported format as a subcommand.
 
 ## Opening in raw mode
 
