@@ -82,10 +82,10 @@ A primeira coisa que queremos fazer ao carregar o arquivo é trabalhar com ele l
 ---+------------------------------
 ```
 
-Podemos notar que estamos lidando com linhas porque voltamos a ver uma tabela. Nosso próximo passo é tentar dividir as linhas em algo um pouco mais útil. Para isso, vamos usar o comando `split-column`. Como o nome implica, esse comando nos dá uma forma de dividir em colunas uma string delimitada. Informamos qual é o delimitador e o comando faz o resto:
+Podemos notar que estamos lidando com linhas porque voltamos a ver uma tabela. Nosso próximo passo é tentar dividir as linhas em algo um pouco mais útil. Para isso, vamos usar o comando `split column`. Como o nome implica, esse comando nos dá uma forma de dividir em colunas uma string delimitada. Informamos qual é o delimitador e o comando faz o resto:
 
 ```shell
-> open people.txt | lines | split-column "|"
+> open people.txt | lines | split column "|"
 ---+----------+-----------+-----------
  # | Column1  | Column2   | Column3 
 ---+----------+-----------+-----------
@@ -98,7 +98,7 @@ Podemos notar que estamos lidando com linhas porque voltamos a ver uma tabela. N
 Está quase certo. Parece que tem um espaço extra ali. Vamos mudar nosso delimitador:
 
 ```shell
-> open people.txt | lines | split-column " | "
+> open people.txt | lines | split column " | "
 ---+---------+---------+----------
  # | Column1 | Column2 | Column3 
 ---+---------+---------+----------
@@ -108,10 +108,10 @@ Está quase certo. Parece que tem um espaço extra ali. Vamos mudar nosso delimi
 ---+---------+---------+----------
 ```
 
-Nada mal. O comando `split-column` retorna dados que podemos usar. Ele também vai além e nos dá nomes de coluna padrão:
+Nada mal. O comando `split column` retorna dados que podemos usar. Ele também vai além e nos dá nomes de coluna padrão:
 
 ```shell
-> open people.txt | lines | split-column " | " | get Column1
+> open people.txt | lines | split column " | " | get Column1
 ---+---------
  # | value 
 ---+---------
@@ -124,7 +124,7 @@ Nada mal. O comando `split-column` retorna dados que podemos usar. Ele também v
 Podemos também nomear nossas colunas ao invés de usar os nomes padrão:
 
 ```shell
-> open people.txt | lines | split-column " | " first_name last_name job
+> open people.txt | lines | split column " | " first_name last_name job
 ---+------------+-----------+----------
  # | first_name | last_name | job 
 ---+------------+-----------+----------
@@ -137,7 +137,7 @@ Podemos também nomear nossas colunas ao invés de usar os nomes padrão:
 Agora que nossos dados estão em uma tabela, podemos usar todos os comandos que já usávamos antes em tabelas:
 
 ```shell
-> open people.txt | lines | split-column " | " first_name last_name job | sort-by first_name
+> open people.txt | lines | split column " | " first_name last_name job | sort-by first_name
 ---+------------+-----------+----------
  # | first_name | last_name | job 
 ---+------------+-----------+----------
@@ -148,8 +148,6 @@ Agora que nossos dados estão em uma tabela, podemos usar todos os comandos que 
 ```
 
 Há outros comandos que você pode usar para trabalhar com strings:
-
-* split-row
 * str
 * lines
 * size

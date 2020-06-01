@@ -1,0 +1,4 @@
+```
+$ nu
+/home/jonathan/Source>
+```

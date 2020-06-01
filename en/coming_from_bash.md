@@ -2,12 +2,12 @@
 layout: content
 title: Coming from Bash
 prev: Plugins
-next: Nushell Map From Shells and DSLs Languages
+next: Shells/DSL map
 link_prev: /en/plugins.html
 link_next: /en/nushell_map.html
 ---
 
-Note: this table assumes Nushell 0.14.1 or later.
+Note: this table assumes Nu 0.14.1 or later.
 
 | Bash        | Nu           | Task  |
 | ------------- | ------------- | ----- |
@@ -41,8 +41,7 @@ Note: this table assumes Nushell 0.14.1 or later.
 | `<update ~/.bashrc>` | `echo $nu.env | insert var value | config --set_into env` | Update environment variables permanently |
 | `FOO=BAR ./bin` | `FOO=BAR ./bin` | Update environment temporarily |
 | `alias s="git status -sb"` | `alias s [] { git status -sb }` | Define an alias temporarily |
-| `<update ~/.bashrc>` | `config --set [startup ["alias myecho [msg] { echo Hello $msg }"]]` | Add a first alias permanently (for new shells) |
-| `<update ~/.bashrc>` | `config --get startup | append "alias s [] { git status -sb }" | config --set_into startup` | Add an additional alias permanently (for new shells) |
+| `<update ~/.bashrc>` | `alias --save myecho [msg] { echo Hello $msg }` | Define an alias for all sessions (persist it in startup config) |
 | `<update ~/.bashrc>` | `<update nu/config.toml>` | Add and edit alias permanently (for new shells), find path for the file with `config --path` |
 | `bash -c <commands>` | `nu -c <commands>` | Run a pipeline of commands (requires 0.9.1 or later) |
 | `bash <script file>` | `nu <script file>` | Run a script file (requires 0.9.1 or later) |

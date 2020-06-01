@@ -136,7 +136,7 @@ Nuをログインシェルとして利用するには、`path`と`env`変数を�
 
 ## プロンプトの設定
 
-現在、プロンプトの設定は[starship](https://github.com/starship/starship])プロンプトサポートつきでNuをインストールすることで可能になります。
+現在、プロンプトの設定は[starship](https://github.com/starship/starship)プロンプトサポートつきでNuをインストールすることで可能になります。
 
 ```
 nushell on 📙 master [$] is 📦 v0.5.1 via 🦀 v1.40.0-nightly 
