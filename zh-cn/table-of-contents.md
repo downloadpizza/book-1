@@ -15,8 +15,8 @@ link_next: /zh-cn/installation.html
 * [使用表](working_with_tables.md) - 使用 nushell 的表结构
 * [管道](pipeline.md) - 管道是如何运作的
 * [配置](configuration.md) - 如何配置 nushell
-* [Aliases](aliases.md) - Aliases for blocks of commands
-* [Math](math.md) - Math operations in nushell
+* [别名](aliases.md) - 一个命令块的别名
+* [算数](math.md) - nushell 中的算数运算符
 * [Environment](environment.md) - Working with environment variables
 * [Metadata](metadata.md) - An explanation of nushell's metadata system
 * [Shells](shells_in_shells.md) - Working with multiple locations
