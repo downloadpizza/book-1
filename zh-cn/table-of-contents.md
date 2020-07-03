@@ -18,7 +18,7 @@ link_next: /zh-cn/installation.html
 * [别名](aliases.md) - 一个命令块的别名
 * [算数](math.md) - nushell 中的算数运算符
 * [环境](environment.md) - 操作环境变量
-* [Metadata](metadata.md) - An explanation of nushell's metadata system
+* [元数据](metadata.md) - 解释 nushell 的元数据系统
 * [Shells](shells_in_shells.md) - Working with multiple locations
 * [Escaping commands](escaping.md) - Escaping to native commands of the same name
 * [Plugins](plugins.md) - Enhancing nushell with more features using plugins
