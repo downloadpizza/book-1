@@ -140,15 +140,15 @@ With this, you should be able to `chsh` and set Nu to be your login shell. After
 
 Currently, prompt configuration is handled by installing Nu with the [starship](https://github.com/starship/starship) prompt support. The starship prompt support is available by default.
 
-From v0.16, displaying the starship prompt is now a configuration option. The prompt is disabled by default. To change config options one must be in the nu shell.
+Starting with v0.16, displaying the starship prompt is now a configuration option. The prompt is disabled by default, but can be enabled using the `use_starship` config setting
 
-To enable the starship prompt, enter the following command:
+To enable the starship prompt, enter the following command (in 0.16.1 and later):
 
 ```
 config set use_starship $true
 ```
 
-To disable the starship prompt, enter the following command:
+To disable the starship prompt, enter the following command (in 0.16.1 and later):
 
 ```
 config set use_starship $false
