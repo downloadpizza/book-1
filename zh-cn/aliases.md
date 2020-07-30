@@ -48,10 +48,10 @@ hello world
 alias e --save [msg] { echo $msg }
 ```
 
-别名将被存储在启动配置文件中，你可以使用 `config --get startup` 来查看它们。如果你得到一个错误，则是 `startup` 配置文件还不存在。
+别名将被存储在启动配置文件中，你可以使用 `config get startup` 来查看它们。如果你得到一个错误，则是 `startup` 配置文件还不存在。
 
 你同样可以直接在 config.toml 文件中编辑别名，例如使用 `vi`：
 
 ```
-config --path | vi $it
+config path | vi $it
 ```
