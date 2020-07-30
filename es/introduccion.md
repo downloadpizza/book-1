@@ -161,13 +161,17 @@ Si esto se parece mucho a lo que teníamos antes, ¡tienes buen ojo! Es similar,
 Configuration management.
 
 Usage:
-  > config {flags}
+  > config <subcommand> {flags}
 
-flags:
-  --load <Path>
-  --set <Any>
-  --get <Any>
-  --remove <Any>
-  --clear
-  --path
+Subcommands:
+  config get -
+  config set -
+  config set_into -
+  config clear -
+  config load -
+  config remove -
+  config path -
+
+Flags:
+  -h, --help:
 ```

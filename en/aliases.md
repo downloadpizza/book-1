@@ -48,10 +48,10 @@ By default, aliases only apply to the current session. That can be useful for a 
 alias e --save [msg] { echo $msg }
 ```
 
-Aliases are stored in the startup config, which you can look at with `config --get startup`. If you get an error, the `startup` config doesn't yet exist.
+Aliases are stored in the startup config, which you can look at with `config get startup`. If you get an error, the `startup` config doesn't yet exist.
 
 You can also edit alises directly in the config.toml file, for example using `vi`:
 
 ```
-config --path | vi $it
+config path | vi $it
 ```

@@ -78,7 +78,7 @@ To remove a variable from the configuration, use the `remove` flag:
 
 ### Clearing the whole configuration
 
-If you want to clear the whole configuration and start fresh, you can use the `--clear` flag. Of course, be careful with this as once you run it, the configuration file is also cleared.
+If you want to clear the whole configuration and start fresh, you can use the `clear` flag. Of course, be careful with this as once you run it, the configuration file is also cleared.
 
 ```
 > config clear
