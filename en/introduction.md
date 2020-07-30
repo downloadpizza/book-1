@@ -11,9 +11,9 @@ Hello, and welcome to the Nushell project. The goal of this project is to take t
 
 Nu takes cues from a lot of familiar territory: traditional shells like bash, advanced shells like PowerShell, functional programming, systems programming, and more. But rather than trying to be the jack of all trades, Nu focuses its energy on doing a few things well:
 
-- Create a flexible cross-platform shell with a modern feel
-- Allow you to mix and match commandline applications with a shell that understands the structure of your data
-- Have the level of UX polish that modern CLI apps provide
+* Create a flexible cross-platform shell with a modern feel
+* Allow you to mix and match commandline applications with a shell that understands the structure of your data
+* Have the level of UX polish that modern CLI apps provide
 
 The easiest way to see what Nu can do is to start with some examples, so let's dive in.
 
@@ -164,7 +164,7 @@ jonathan
 
 If this looks very similar to what we had before, you have a keen eye! It is similar, but with one important difference: we've called `^echo` with the value we saw earlier. This allows us to pass data out of Nu into `echo` (or any command outside of Nu, like `git` for example).
 
-_Note: help text for any of Nu's builtin commands can be discovered with the `help` command_:
+*Note: help text for any of Nu's builtin commands can be discovered with the `help` command*:
 
 ```
 > help config
@@ -174,12 +174,12 @@ Usage:
   > config {flags}
 
 flags:
-  -h, help: Display this help message
-  -l, load <file path>: load the config from the path give
-  -s, set <any>: set a value in the config, eg) set [key value]
-  -i, set_into <string>: sets a variable from values in the pipeline
-  -g, get <any>: get a value from the config
-  -r, remove <any>: remove a value from the config
-  -c, clear: clear the config
-  -p, path: return the path to the config file
+  -h, --help: Display this help message
+  -l, --load <file path>: load the config from the path give
+  -s, --set <any>: set a value in the config, eg) --set [key value]
+  -i, --set_into <string>: sets a variable from values in the pipeline
+  -g, --get <any>: get a value from the config
+  -r, --remove <any>: remove a value from the config
+  -c, --clear: clear the config
+  -p, --path: return the path to the config file
 ```

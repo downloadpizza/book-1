@@ -11,9 +11,9 @@ link_next: /zh-cn/moving_around.html
 
 Nu 从许多熟悉的领域中汲取了线索：bash 等传统 shell，PowerShell 等高级 shell，函数式编程，系统编程等。但是 Nu 并没有试图成为所有行业的杰作，而是将精力集中在做好一些事情上：
 
-- 创建具有现代感的灵活的跨平台 Shell
-- 允许你将命令行应用程序与可理解数据结构的 Shell 进行混合和匹配
-- 具有现代命令行应用程序提供的用户体验优化
+* 创建具有现代感的灵活的跨平台 Shell
+* 允许你将命令行应用程序与可理解数据结构的 Shell 进行混合和匹配
+* 具有现代命令行应用程序提供的用户体验优化
 
 了解 Nu 可以做什么的最简单方式就是通过一些例子，所以让我们沉浸进去吧。
 
@@ -155,16 +155,15 @@ Nu 提供了许多可在表格上工作的命令。例如，我们可以过滤 `
 
 您可能已经注意到其他的不同之处。 我们没有一个数据表，而是只有一个元素：字符串 "jonathan"。 Nu 使用数据表和字符串。 字符串是在 Nu 之外使用命令的重要组成部分。
 
-让我们看看字符串如何在 Nu 之外起作用。 我们将从前面的示例开始，并运行外部的 `echo` 命令（ `^` 告诉 nu 不要使用内置的 `echo` 命令）：
+让我们看看字符串如何在Nu之外起作用。 我们将从前面的示例开始，并运行外部的 `echo` 命令（ `^` 告诉 nu 不要使用内置的 `echo` 命令）：
 
 ```
 > sys | get host.sessions | ^echo $it
 jonathan
 ```
-
 如果这看起来与我们以前的传统 Shell 非常相似，那么就说明你拥有敏锐的眼睛！ 相似，但是有一个重要的区别：我们对前面看到的值调用了 `^echo` 。 这允许我们将数据从 Nu 传递到 `echo`（或 Nu 外部的任何命令，例如 `git`）。
 
-_注意：Nu 的内建命令的帮助文本可以用 `help` 来浏览_:
+*注意：Nu 的内建命令的帮助文本可以用 `help` 来浏览*:
 
 ```
 > help config
@@ -174,12 +173,12 @@ Usage:
   > config {flags}
 
 flags:
-  -h, help: Display this help message
-  -l, load <file path>: load the config from the path give
-  -s, set <any>: set a value in the config, eg) set key value
-  -i, set_into <string>: sets a variable from values in the pipeline
-  -g, get <any>: get a value from the config
-  -r, remove <any>: remove a value from the config
-  -c, clear: clear the config
-  -p, path: return the path to the config file
+  -h, --help: Display this help message
+  -l, --load <file path>: load the config from the path give
+  -s, --set <any>: set a value in the config, eg) --set [key value]
+  -i, --set_into <string>: sets a variable from values in the pipeline
+  -g, --get <any>: get a value from the config
+  -r, --remove <any>: remove a value from the config
+  -c, --clear: clear the config
+  -p, --path: return the path to the config file
 ```

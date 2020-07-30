@@ -7,13 +7,13 @@ link_prev: /pt-BR/instalacao.html
 link_next: /pt-BR/explorando.html
 ---
 
-Olá! Seja bem vindo ao projeto Nushell. O objetivo desse projeto é trazer a filosofia de shells do Unix, onde pipes conectam comandos simples, para o estilo moderno de desenvolvimento.
+Olá! Seja bem vindo ao projeto Nushell. O objetivo desse projeto é trazer a filosofia de shells do Unix, onde  pipes conectam comandos simples, para o estilo moderno de desenvolvimento.
 
 Nu usa dicas de vários terrenos familiares: shells tradicionais como bash, shells avançados como PowerShell, programação funcional, programação de sistemas, e outros. Porém, mais do que tentar ser "pau pra toda obra", Nu foca sua energia em fazer poucas coisas muito bem:
 
-- Criar um shell multiplataforma flexível para o programador moderno da era GitHub
-- Permitir que você combine aplicações de linha de comando com um shell que entende a estrutura dos seus dados
-- Ter o mesmo nível de polimento de UX (experência do usuário) fornecido pelas aplicações CLI modernas
+* Criar um shell multiplataforma flexível para o programador moderno da era GitHub
+* Permitir que você combine aplicações de linha de comando com um shell que entende a estrutura dos seus dados
+* Ter o mesmo nível de polimento de UX (experência do usuário) fornecido pelas aplicações CLI modernas
 
 O jeito mais fácil de ver o que o Nu pode fazer é começar com alguns exemplos, então vamos nessa.
 
@@ -153,7 +153,7 @@ jonathan
 
 Se isso lhe parece bastante similar ao que tínhamos anteriormente, você tem um olho afiado! É similar, mas com uma diferença importante: chamamos `echo` com o valor retornado antes. Isso permite que passemos dados para o `echo` fora do Nu (ou para qualquer outro comando de fora do Nu, como `git`, por exemplo).
 
-_Nota: você pode obter um texto de ajuda para quaisquer comandos embutidos do Nu usando o comando `help`_:
+*Nota: você pode obter um texto de ajuda para quaisquer comandos embutidos do Nu usando o comando `help`*:
 
 ```shell
 > help config
@@ -163,10 +163,10 @@ Usage:
   > config {flags}
 
 flags:
-  load <Path>
-  set <Any>
-  get <Any>
-  remove <Any>
-  clear
-  path
+  --load <Path>
+  --set <Any>
+  --get <Any>
+  --remove <Any>
+  --clear
+  --path
 ```

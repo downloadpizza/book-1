@@ -11,9 +11,9 @@ Hola, y bienvenido al proyecto Nushell. El objectivo de este proyecto es tomar l
 
 Nu toma ideas de muchos territorios familiares: shells tradicionales como bash, shells avanzadas como PowerShell, programación funcional, programación de sistemas, y más. Pero, en lugar de ser un "Todo en uno", No enfoca su energía en hacer algunas cosas bien:
 
-- Crear una shell flexible de plataforma cruzada con un toque moderno.
-- Permitirte mezclar y combinar aplicaciones de línea de comandos con una shell que comprende la estructura de tus datos.
-- Tenga el brillo UX que proporcionan las aplicaciones modernas CLI.
+* Crear una shell flexible de plataforma cruzada con un toque moderno.
+* Permitirte mezclar y combinar aplicaciones de línea de comandos con una shell que comprende la estructura de tus datos.
+* Tenga el brillo UX que proporcionan las aplicaciones modernas CLI.
 
 La manera más facil de ver qué puede hacer Nu es empezando con ejemplos, así que vamos a sumergirnos.
 
@@ -22,13 +22,13 @@ Lo primero que notarás al ejercutar un comando como `ls` es que en lugar de un 
 ```
 > ls
 ----+------------------+-----------+----------+----------+----------------+----------------
- #  | name             | type      | readonly | size     | accessed       | modified
+ #  | name             | type      | readonly | size     | accessed       | modified 
 ----+------------------+-----------+----------+----------+----------------+----------------
- 0  | .azure           | Directory |          | 4.1 KB   | 2 months ago   | a week ago
- 1  | IMG_1291.jpg     | File      |          | 115.5 KB | a month ago    | 4 months ago
- 2  | Cargo.toml       | File      |          | 3.1 KB   | 17 minutes ago | 17 minutes ago
- 3  | LICENSE          | File      |          | 1.1 KB   | 2 months ago   | 2 months ago
- 4  | readonly.txt     | File      | readonly | <empty>  | a month ago    | a month ago
+ 0  | .azure           | Directory |          | 4.1 KB   | 2 months ago   | a week ago 
+ 1  | IMG_1291.jpg     | File      |          | 115.5 KB | a month ago    | 4 months ago 
+ 2  | Cargo.toml       | File      |          | 3.1 KB   | 17 minutes ago | 17 minutes ago 
+ 3  | LICENSE          | File      |          | 1.1 KB   | 2 months ago   | 2 months ago 
+ 4  | readonly.txt     | File      | readonly | <empty>  | a month ago    | a month ago 
  5  | target           | Directory |          | 4.1 KB   | 2 days ago     | 15 minutes ago
 ...
 ```
@@ -40,14 +40,14 @@ Lo primero que vamos hacer es ordenar nuestra tabla por nombre. Para poder hacer
 ```
 > ls | sort-by name
 ----+------------------+-----------+----------+----------+----------------+----------------
- #  | name             | type      | readonly | size     | accessed       | modified
+ #  | name             | type      | readonly | size     | accessed       | modified 
 ----+------------------+-----------+----------+----------+----------------+----------------
- 0  | .azure           | Directory |          | 4.1 KB   | 2 months ago   | a week ago
- 1  | .cargo           | Directory |          | 4.1 KB   | 2 months ago   | 2 months ago
- 2  | .editorconfig    | File      |          | 148 B    | 2 months ago   | 2 months ago
- 3  | .git             | Directory |          | 4.1 KB   | 2 months ago   | 20 minutes ago
- 4  | .gitignore       | File      |          | 58 B     | a week ago     | a week ago
- 5  | .vscode          | Directory |          | 4.1 KB   | a month ago    | a month ago
+ 0  | .azure           | Directory |          | 4.1 KB   | 2 months ago   | a week ago 
+ 1  | .cargo           | Directory |          | 4.1 KB   | 2 months ago   | 2 months ago 
+ 2  | .editorconfig    | File      |          | 148 B    | 2 months ago   | 2 months ago 
+ 3  | .git             | Directory |          | 4.1 KB   | 2 months ago   | 20 minutes ago 
+ 4  | .gitignore       | File      |          | 58 B     | a week ago     | a week ago 
+ 5  | .vscode          | Directory |          | 4.1 KB   | a month ago    | a month ago 
 ...
 ```
 
@@ -58,28 +58,29 @@ Nu proporciona comandos que trabajan con tablas. Por ejemplo, podemos filtrar lo
 ```
 > ls | where size > 4kb
 ----+----------------+------+----------+----------+----------------+----------------
- #  | name           | type | readonly | size     | accessed       | modified
+ #  | name           | type | readonly | size     | accessed       | modified 
 ----+----------------+------+----------+----------+----------------+----------------
- 0  | IMG_1291.jpg   | File |          | 115.5 KB | a month ago    | 4 months ago
- 1  | README.md      | File |          | 11.1 KB  | 2 days ago     | 2 days ago
- 2  | IMG_1291.png   | File |          | 589.0 KB | a month ago    | a month ago
- 3  | IMG_1381.jpg   | File |          | 81.0 KB  | a month ago    | 4 months ago
- 4  | butterfly.jpeg | File |          | 4.2 KB   | a month ago    | a month ago
+ 0  | IMG_1291.jpg   | File |          | 115.5 KB | a month ago    | 4 months ago 
+ 1  | README.md      | File |          | 11.1 KB  | 2 days ago     | 2 days ago 
+ 2  | IMG_1291.png   | File |          | 589.0 KB | a month ago    | a month ago 
+ 3  | IMG_1381.jpg   | File |          | 81.0 KB  | a month ago    | 4 months ago 
+ 4  | butterfly.jpeg | File |          | 4.2 KB   | a month ago    | a month ago 
  5  | Cargo.lock     | File |          | 199.6 KB | 22 minutes ago | 22 minutes ago
 ```
 
 Al igual que en la filosofía Unix, poder hacer que los comandos hablen entre ellos nos da maneras de mezclar y combinar de formas distintas. Probemos otro comando:
 
+
 ```
 > ps
 -----+-------+----------+------+--------------------------------------------------------------------------------
- #   | pid   | status   | cpu  | name
+ #   | pid   | status   | cpu  | name 
 -----+-------+----------+------+--------------------------------------------------------------------------------
- 0   | 1003  | Unknown  | 0.00 |
- 1   | 1515  | Sleeping | 0.00 | /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
- 2   | 2128  | Sleeping | 0.00 | /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
- 3   | 2285  | Unknown  | 0.00 |
- 4   | 8872  | Sleeping | 0.00 | /usr/lib/gvfs/gvfsd-dnssd--spawner:1.23/org/gtk/gvfs/exec_spaw/4
+ 0   | 1003  | Unknown  | 0.00 |  
+ 1   | 1515  | Sleeping | 0.00 | /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy 
+ 2   | 2128  | Sleeping | 0.00 | /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy 
+ 3   | 2285  | Unknown  | 0.00 |  
+ 4   | 8872  | Sleeping | 0.00 | /usr/lib/gvfs/gvfsd-dnssd--spawner:1.23/org/gtk/gvfs/exec_spaw/4 
  5   | 1594  | Sleeping | 0.00 | /usr/lib/ibus/ibus-engine-simple
 ```
 
@@ -90,11 +91,11 @@ Es posible que estés familiarizado con el comando `ps` si has utlizado Linux. C
 ```
 > ps | where cpu > 10
 ---+-------+----------+-------+-----------------------------
- # | pid   | status   | cpu   | name
+ # | pid   | status   | cpu   | name 
 ---+-------+----------+-------+-----------------------------
- 0 | 1992  | Sleeping | 44.52 | /usr/bin/gnome-shell
- 1 | 1069  | Sleeping | 16.15 |
- 2 | 24116 | Sleeping | 13.70 | /opt/google/chrome/chrome
+ 0 | 1992  | Sleeping | 44.52 | /usr/bin/gnome-shell 
+ 1 | 1069  | Sleeping | 16.15 |  
+ 2 | 24116 | Sleeping | 13.70 | /opt/google/chrome/chrome 
  3 | 21976 | Sleeping | 12.67 | /usr/share/discord/Discord
 ```
 
@@ -105,9 +106,9 @@ Ejecutando `date` nos proporciona información del día y tiempo:
 ```
 > date
 ------+-------+-----+------+--------+--------+----------
- year | month | day | hour | minute | second | timezone
+ year | month | day | hour | minute | second | timezone 
 ------+-------+-----+------+--------+--------+----------
- 2019 | 8     | 17  | 19   | 20     | 50     | +12:00
+ 2019 | 8     | 17  | 19   | 20     | 50     | +12:00 
 ------+-------+-----+------+--------+--------+----------
 ```
 
@@ -116,9 +117,9 @@ Ejecutando `sys` devuelve información sobre el sistema en el que se ejecuta Nu:
 ```
 > sys
 ----------+----------+-----------+----------+-----------+-----------
- host     | cpu      | disks     | mem      | temp      | net
+ host     | cpu      | disks     | mem      | temp      | net 
 ----------+----------+-----------+----------+-----------+-----------
- [object] | [object] | [3 items] | [object] | [3 items] | [3 items]
+ [object] | [object] | [3 items] | [object] | [3 items] | [3 items] 
 ----------+----------+-----------+----------+-----------+-----------
 ```
 
@@ -127,9 +128,9 @@ Esto es un poco diferente ante las tablas que hemos visto. El comando `sys` nos 
 ```
 > sys | get host
 -------+------------------+----------+--------+----------+----------
- name  | release          | hostname | arch   | uptime   | users
+ name  | release          | hostname | arch   | uptime   | users 
 -------+------------------+----------+--------+----------+----------
- Linux | 5.0.0-21-generic | pop-os   | x86_64 | [object] | [1 item]
+ Linux | 5.0.0-21-generic | pop-os   | x86_64 | [object] | [1 item] 
 -------+------------------+----------+--------+----------+----------
 ```
 
@@ -137,7 +138,7 @@ El comando `get` nos permite saltar directo al contenido de una columa de la tab
 
 ```
 > sys | get host.users
-jonathan
+jonathan   
 ```
 
 En este momento, solo hay un usuario en el sistema llamado "jonathan". Notarás que podemos pasar una ruta y no únicamente el nombre de una columna. Nu tomará esta ruta e irá a los datos correspondientes en la tabla.
@@ -153,7 +154,7 @@ jonathan
 
 Si esto se parece mucho a lo que teníamos antes, ¡tienes buen ojo! Es similar, pero con una diferencia importante: hemos llamado `echo` con el valor que vimos antes. Esto nos permite pasar datos fuera de Nu a `echo` (o cualquier comando fuera de Nu, como `git` por ejemplo)
 
-_Nota: El texto de ayuda para cualquiera de los comandos incorporados de Nu se pueden observar con el comando `help`_:
+*Nota: El texto de ayuda para cualquiera de los comandos incorporados de Nu se pueden observar con el comando `help`*:
 
 ```
 > help config
@@ -163,10 +164,10 @@ Usage:
   > config {flags}
 
 flags:
-  load <Path>
-  set <Any>
-  get <Any>
-  remove <Any>
-  clear
-  path
+  --load <Path>
+  --set <Any>
+  --get <Any>
+  --remove <Any>
+  --clear
+  --path
 ```
