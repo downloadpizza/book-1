@@ -171,15 +171,17 @@ If this looks very similar to what we had before, you have a keen eye! It is sim
 Configuration management.
 
 Usage:
-  > config {flags}
+  > config <subcommand> {flags}
 
-flags:
+Subcommands:
+  config get - Gets a value from the config
+  config set - Sets a value in the config
+  config set_into - Sets a value in the config
+  config clear - clear the config
+  config load - Loads the config from the path given
+  config remove - Removes a value from the config
+  config path - return the path to the config file
+
+Flags:
   -h, --help: Display this help message
-  -l, --load <file path>: load the config from the path give
-  -s, --set <any>: set a value in the config, eg) --set [key value]
-  -i, --set_into <string>: sets a variable from values in the pipeline
-  -g, --get <any>: get a value from the config
-  -r, --remove <any>: remove a value from the config
-  -c, --clear: clear the config
-  -p, --path: return the path to the config file
 ```

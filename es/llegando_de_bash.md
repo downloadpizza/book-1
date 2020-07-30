@@ -35,15 +35,15 @@ Nota: Esta tabla asume Nushell 0.14.1 or posterior.
 |  | `help commands` | List all available commands |
 | `command1 && command2` | `command1; command2` | Run a command, and if it's successful run a second |
 | `echo $PATH` | `echo $nu.path` | See the current path |
-| `<update ~/.bashrc>` | `config --set [path [<dir1> <dir2> ...]]` | Update PATH permanently |
+| `<update ~/.bashrc>` | `config set [path [<dir1> <dir2> ...]]` | Update PATH permanently |
 | `export PATH = $PATH:/usr/other/bin` | `<not yet possible>` | Update PATH temporarily |
 | `export` | `echo $nu.env` | List the current environment variables |
-| `<update ~/.bashrc>` | `echo $nu.env | insert var value | config --set_into env` | Update environment variables permanently |
+| `<update ~/.bashrc>` | `echo $nu.env | insert var value | config set_into env` | Update environment variables permanently |
 | `FOO=BAR ./bin` | `FOO=BAR ./bin` | Update environment temporarily |
 | `alias s="git status -sb"` | `alias s [] { git status -sb }` | Define an alias temporarily |
-| `<update ~/.bashrc>` | `config --set [startup ["alias myecho [msg] { echo Hello $msg }"]]` | Add a first alias permanently (for new shells) |
-| `<update ~/.bashrc>` | `config --get startup | append "alias s [] { git status -sb }" | config --set_into startup` | Add an additional alias permanently (for new shells) |
-| `<update ~/.bashrc>` | `<update nu/config.toml>` | Add and edit alias permanently (for new shells), find path for the file with `config --path` |
+| `<update ~/.bashrc>` | `config set [startup ["alias myecho [msg] { echo Hello $msg }"]]` | Add a first alias permanently (for new shells) |
+| `<update ~/.bashrc>` | `config get startup | append "alias s [] { git status -sb }" | config set_into startup` | Add an additional alias permanently (for new shells) |
+| `<update ~/.bashrc>` | `<update nu/config.toml>` | Add and edit alias permanently (for new shells), find path for the file with `config path` |
 | `bash -c <commands>` | `nu -c <commands>` | Run a pipeline of commands (requires 0.9.1 or later) |
 | `bash <script file>` | `nu <script file>` | Run a script file (requires 0.9.1 or later) |
 | `\` | `<not yet possible>` | Line continuation is not yet supported. |

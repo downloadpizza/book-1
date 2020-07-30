@@ -28,18 +28,18 @@ Nu has a small, but growing, number of internal variables you can set to change 
 
 ### Setting variables
 
-To set one of these variables, you can use `config --set`. For example:
+To set one of these variables, you can use `config set`. For example:
 
 ```
-> config --set [edit_mode "vi"]
+> config set edit_mode "vi"
 ```
 
 ### Setting a variable from the pipeline
 
-There's an additional way to set a variable, and that is to use the contents of the pipeline as the value you want to use for the variable. For this, use the `--set_into` flag:
+There's an additional way to set a variable, and that is to use the contents of the pipeline as the value you want to use for the variable. For this, use the `set_into` flag:
 
 ```
-> echo "bar" | config --set_into foo
+> echo "bar" | config set_into foo
 ```
 
 This is helpful when working with the `env` and `path` variables.
@@ -62,43 +62,43 @@ Note: if you haven't set any configuration variables, yet, this may be empty.
 
 ### Getting a variable
 
-Using the `--get` flag, you can retrieve the value for a given variable:
+Using the `get` flag, you can retrieve the value for a given variable:
 
 ```
-> config --get edit_mode
+> config get edit_mode
 ```
 
 ### Removing a variable
 
-To remove a variable from the configuration, use the `--remove` flag:
+To remove a variable from the configuration, use the `remove` flag:
 
 ```
-> config --remove edit_mode
+> config remove edit_mode
 ```
 
 ### Clearing the whole configuration
 
-If you want to clear the whole configuration and start fresh, you can use the `--clear` flag. Of course, be careful with this as once you run it, the configuration file is also cleared.
+If you want to clear the whole configuration and start fresh, you can use the `clear` flag. Of course, be careful with this as once you run it, the configuration file is also cleared.
 
 ```
-> config --clear
+> config clear
 ```
 
 ### Finding where the configuration is stored
 
-The configuration file is loaded from a default location. To find what this location is on your system, you can ask for it using the `--path` flag:
+The configuration file is loaded from a default location. To find what this location is on your system, you can ask for it using the `path` flag:
 
 ```
-> config --path
+> config path
 /home/jonathant/.config/nu/config.toml
 ```
 
 ### Loading the config from a file
 
-You may wish to load the configuration from a different file than the default. To do so, use the `--load` parameter:
+You may wish to load the configuration from a different file than the default. To do so, use the `load` parameter:
 
 ```
-> config --load myconfiguration.toml
+> config load myconfiguration.toml
 ```
 
 ## Configuring Nu as a login shell
@@ -108,8 +108,8 @@ To use Nu as a login shell, you'll need to configure the `path` and `env` config
 Before switching, run Nu inside of another shell, like Bash. Then, take the environment and PATH from that shell with the following commands:
 
 ```
-> config --set [path $nu.path]
-> config --set [env $nu.env]
+> config set path $nu.path
+> config set env  $nu.env
 ```
 
 Versions before 0.7.2 used:
