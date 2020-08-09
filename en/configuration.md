@@ -23,6 +23,7 @@ Nu has a small, but growing, number of internal variables you can set to change 
 | startup | list of strings | commands, like `alias`es, to run when nushell starts |
 | table_mode | "light" or other | enable lightweight or normal tables |
 | no_auto_pivot | boolean | whether or not to automatically pivot single-row results |
+| skip_welcome_message | boolean | whether or not to skip displaying the welcome message when nushell starts |
 
 ## Usage
 
