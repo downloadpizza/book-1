@@ -50,7 +50,7 @@ alias e --save [msg] { echo $msg }
 
 Aliases are stored in the startup config, which you can look at with `config get startup`. If you get an error, the `startup` config doesn't yet exist.
 
-You can also edit alises directly in the config.toml file, for example using `vi`:
+You can also edit aliases directly in the config.toml file, for example using `vi`:
 
 ```
 config path | vi $it
